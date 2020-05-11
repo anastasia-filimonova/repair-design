@@ -26,7 +26,7 @@ function serveSass() {
 exports.serve = bs;
 
 function mincss() {
-  return src(["./*.css" , '!./*.min.css'])
+  return src(["./css/*.css" , '!./css/*.min.css'])
   .pipe(rename({suffix: '.min'}))
   .pipe(cleanCSS())
   .pipe(dest('./'));
