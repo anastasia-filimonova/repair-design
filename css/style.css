@@ -325,6 +325,22 @@ template {
   animation-delay: 1s;
   animation-direction: reverse; }
 
+@font-face {
+  font-family: 'Futura Book';
+  src: url("../fonts/futura/FuturaBookC.woff") format("woff");
+  src: url("../fonts/futura/FuturaBookC.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
+@font-face {
+  font-family: 'Futura Demi';
+  src: url("../fonts/futura/FuturaDemiC.woff") format("woff");
+  src: url("../fonts/futura/FuturaDemiC.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
 .header {
   background-color: #131313;
   padding: 24px 0; }
@@ -351,5 +367,5 @@ template {
   margin-right: 45px; }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Futura Book', sans-serif;
   font-style: 14px; }
