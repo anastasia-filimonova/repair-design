@@ -366,6 +366,13 @@ template {
 .contacts__phone {
   margin-right: 45px; }
 
+.hero {
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  height: 100vh; }
+
+* {
+  border: 1px solid red; }
+
 body {
   font-family: 'Futura Book', sans-serif;
   font-style: 14px; }
