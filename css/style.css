@@ -397,6 +397,12 @@ template {
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.7); }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -417,6 +423,7 @@ template {
     text-decoration: none;
     color: #ffffff; }
   .hero__content {
+    position: relative;
     max-width: 670px; }
   .hero__text {
     font-size: 22px;
