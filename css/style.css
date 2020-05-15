@@ -313,6 +313,7 @@ template {
     color: #ffffff; }
 
 .container {
+  width: 85%;
   max-width: 1256px;
   margin: auto; }
 
@@ -376,12 +377,31 @@ template {
 .hero {
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   padding-top: 84px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh; }
   .hero__instagram {
+    position: absolute;
+    left: 0;
+    top: 0;
     max-width: 80px;
     height: 100%; }
+  .hero__scroll-down {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    min-width: 247px;
+    min-height: 97px;
+    background-color: #131313;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff; }
 
 .instagram {
   display: flex;
@@ -390,14 +410,17 @@ template {
   background-color: #131313; }
   .instagram__link {
     text-transform: uppercase;
-    color: #E3B873;
     text-decoration: none;
-    transform: rotate(-90deg); }
+    transform: rotate(90deg);
+    color: #E3B873; }
+
+.title {
+  margin: 0; }
 
 * {
   border: 1px solid red; }
 
-* {
+*, *:before, *:after {
   box-sizing: border-box; }
 
 body {
