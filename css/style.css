@@ -422,6 +422,14 @@ template {
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff; }
+    .hero__scroll-down::after {
+      content: '';
+      background: url("../img/arrow-down.svg") no-repeat center;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #E3B873;
+      border-radius: 50%;
+      margin-left: 12px; }
   .hero__content {
     position: relative;
     max-width: 670px; }
