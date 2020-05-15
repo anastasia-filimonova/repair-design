@@ -311,6 +311,10 @@ template {
   .button--primary {
     background-color: #E3B873;
     color: #ffffff; }
+  .button--outline {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff; }
 
 .container {
   width: 85%;
@@ -402,6 +406,13 @@ template {
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff; }
+  .hero__content {
+    max-width: 670px; }
+  .hero__text {
+    font-style: 22px;
+    max-width: 500px; }
+  .hero__button {
+    margin-right: 20px; }
 
 .instagram {
   display: flex;
@@ -415,7 +426,12 @@ template {
     color: #E3B873; }
 
 .title {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-size: 40px; }
+  .title--primary {
+    color: #E3B873; }
 
 * {
   border: 1px solid red; }
