@@ -371,10 +371,13 @@ template {
   align-items: center;
   margin-left: 82px; }
   .nav__item {
+    transition: color 0.2s;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     margin-right: 40px; }
+    .nav__item:hover {
+      color: #E3B873; }
 
 .phone {
   color: #E3B873; }
