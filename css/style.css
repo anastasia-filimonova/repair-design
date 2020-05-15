@@ -307,7 +307,8 @@ template {
 .button {
   padding: 13px 20px;
   border: none;
-  border-radius: 2px; }
+  border-radius: 2px;
+  text-transform: uppercase; }
   .button--primary {
     background-color: #E3B873;
     color: #ffffff; }
@@ -365,6 +366,9 @@ template {
   text-transform: uppercase; }
 
 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-left: 82px; }
   .nav__item {
     color: #ffffff;
@@ -375,8 +379,13 @@ template {
 .phone {
   color: #E3B873; }
 
-.contacts__phone {
-  margin-right: 45px; }
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; }
+  .contacts__phone {
+    margin-right: 45px; }
 
 .hero {
   position: relative;
@@ -386,7 +395,8 @@ template {
   align-items: flex-start;
   padding-top: 84px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
-  height: 100vh; }
+  height: 100vh;
+  color: #ffffff; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -409,7 +419,7 @@ template {
   .hero__content {
     max-width: 670px; }
   .hero__text {
-    font-style: 22px;
+    font-size: 22px;
     max-width: 500px; }
   .hero__button {
     margin-right: 20px; }
