@@ -1,3 +1,23 @@
 .hero
+  position: relative
+  padding-top: 100px
   background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
   height: 100vh
+  &__instagram
+    position: absolute
+    max-width: 80px
+    height: 100%
+    left: 0
+    right: 0
+
+  .instagram
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $dark
+    &__link
+      text-transform: uppercase
+      color: $primary
+      text-decoration: none
+      transform: rotate(-90deg)
+

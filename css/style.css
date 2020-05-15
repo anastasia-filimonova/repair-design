@@ -354,11 +354,13 @@ template {
   color: #E3B873;
   text-transform: uppercase; }
 
-.nav__item {
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  margin-right: 40px; }
+.nav {
+  margin-left: 82px; }
+  .nav__item {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 40px; }
 
 .phone {
   color: #E3B873; }
@@ -367,11 +369,32 @@ template {
   margin-right: 45px; }
 
 .hero {
+  position: relative;
+  padding-top: 100px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh; }
+  .hero__instagram {
+    position: absolute;
+    max-width: 80px;
+    height: 100%;
+    left: 0;
+    right: 0; }
+  .hero .instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131313; }
+    .hero .instagram__link {
+      text-transform: uppercase;
+      color: #E3B873;
+      text-decoration: none;
+      transform: rotate(-90deg); }
 
 * {
   border: 1px solid red; }
+
+* {
+  box-sizing: border-box; }
 
 body {
   font-family: 'Futura Book', sans-serif;
