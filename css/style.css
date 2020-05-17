@@ -347,20 +347,25 @@ body {
   font-family: 'Futura Book', sans-serif;
   font-style: 1rem; }
 
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Yeseva One', cursive; }
-  .section-title__image {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .section-title__image::before, .section-title__image::after {
-      content: '';
-      margin: 0 0.714rem;
-      width: 2.285rem;
-      height: 0.143rem;
-      background-color: #E3B873; }
+img {
+  max-width: 100%; }
+
+.section {
+  padding: 60px 0; }
+  .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive; }
+    .section-title__image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__image::before, .section-title__image::after {
+        content: '';
+        margin: 0 0.714rem;
+        width: 2.285rem;
+        height: 0.143rem;
+        background-color: #E3B873; }
 
 @font-face {
   font-family: 'Futura Book';
@@ -502,6 +507,51 @@ body {
   font-size: 2.857rem; }
   .title--primary {
     color: #E3B873; }
+
+.types__section-title {
+  margin-bottom: 1.5rem; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  max-width: 21rem;
+  margin: 0 auto;
+  margin-top: -9.3rem;
+  padding: 1.79rem 2.14rem;
+  background-color: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.29rem; }
+
+.card__list {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.07rem;
+  line-height: 1.79rem;
+  color: #959595; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: -1.79rem;
+  font-size: 1.29rem;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  background-color: #E3B873;
+  color: #ffffff;
+  padding: 1.214rem 2.6rem; }
 
 @media screen and (max-width: 1330px) {
   .contacts__phone {
