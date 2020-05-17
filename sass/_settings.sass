@@ -4,9 +4,12 @@
 *, *:before, *:after
   box-sizing: border-box 
 
+html 
+  font-size: 14px
+
 body
   font-family: 'Futura Book', sans-serif
-  font-style: 14px
+  font-style: 1rem
 
 .section
   &-title
@@ -19,7 +22,7 @@ body
       align-items: center
       &::before, &::after
         content: ''
-        margin: 0 10px
-        width: 32px
-        height: 2px
+        margin: 0 0.714rem
+        width: 2.285rem
+        height: 0.143rem
         background-color: $primary
