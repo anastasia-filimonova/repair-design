@@ -1,10 +1,58 @@
-// @media screen and ( max-width:  )
+@media screen and ( max-width: 1330px )
+  .contacts
+    &__phone
+      margin-right: 1.428rem
+  .nav
+    margin-left: 2rem
+    &__item
+      margin-right: 2.5rem
+
+@media screen and ( max-width: 1200px )
+  html
+    font-size: 12px
+  .nav
+    &__item
+      margin-right: 1rem
   
+@media screen and ( max-width: 992px )
+  .nav
+    display: none
+  .hero
+    &__instagram
+      display: none
+    &__content
+      margin-left: 0
+
+@media screen and ( max-width: 576px )
+  .contacts
+    &__phone
+      margin-right: 0
+      color: $light
+      text-decoration: none
+    &__button
+      display: none
+  .title
+    font-size: 1.64rem
+  .hero
+    &__content
+      max-width: 22.86rem
+    &__text
+      font-size: 1.29rem
+      margin-bottom: 2.28rem
+    &__button
+      display: block
+      min-width: 22.86rem
+      margin-bottom: 1.85rem
+    &__scroll-down
+      display: none
+
+@media screen and ( max-height: 530px )
+  .hero
+    &__scroll-down
+      display: none
+
+    
+  
+    
 
 
-
-//   1200px и выше
-// от 992 до 1200px — мониторы компьютеров
-// от 768 до 992px  — планшеты
-// от 576 до 768px — смартфоны / планшеты
-// от 320 до 576px — смартфоны
