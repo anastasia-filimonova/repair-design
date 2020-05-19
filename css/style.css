@@ -653,6 +653,8 @@ img {
   padding: 1.214rem 5.3rem 1.214rem 2rem; }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 199;
   display: flex;
@@ -664,6 +666,9 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(19, 19, 19, 0.6); }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
