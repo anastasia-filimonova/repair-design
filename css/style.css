@@ -398,6 +398,17 @@ template {
   animation-delay: 1s;
   animation-direction: reverse; }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-30 {
+  flex-basis: 30%; }
+
+.col-50 {
+  flex-basis: 50%; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -413,20 +424,42 @@ img {
 
 .section {
   padding: 60px 0; }
+  .section--dark {
+    background-color: #131313;
+    color: #ffffff; }
   .section-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Yeseva One', cursive; }
-    .section-title__image {
+    text-align: center; }
+    .section-title--left {
+      text-align: left; }
+    .section-title__heading {
+      text-transform: uppercase;
+      font-family: 'Yeseva One', cursive;
+      line-height: 138%; }
+      .section-title__heading--primary {
+        color: #E3B873; }
+    .section-title__word {
       display: flex;
-      justify-content: center;
       align-items: center; }
-      .section-title__image::before, .section-title__image::after {
+      .section-title__word::after {
         content: '';
-        margin: 0 0.714rem;
-        width: 2.285rem;
-        height: 0.143rem;
+        width: 6.43rem;
+        height: 1.5px;
+        margin-left: 2rem;
         background-color: #E3B873; }
+    .section-title__text {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 31.57rem; }
+  .section__image {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section__image::before, .section__image::after {
+      content: '';
+      margin: 0 0.714rem;
+      width: 2.285rem;
+      height: 0.143rem;
+      background-color: #E3B873; }
 
 .video {
   margin: 0;
@@ -597,14 +630,6 @@ img {
 .types__section-title {
   margin-bottom: 1.5rem; }
 
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
-
 .card__text {
   position: relative;
   max-width: 20.5rem;
@@ -653,16 +678,8 @@ img {
     line-height: 1.5rem;
     color: #131313; }
 
-.section-title__headings {
+.section-title__heading {
   font-size: 1.3rem; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .card__text {
   position: relative;
