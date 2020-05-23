@@ -22,11 +22,35 @@
       display: none
     &__content
       margin-left: 0
-
+  .row
+    &--projects
+      align-items: flex-end
+  .section
+    &-title
+      &__text
+        &--projects
+          padding-right: 1rem
+  .swiper
+    &-slide
+      &__heading
+        font-size: 1rem
+  
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
     align-items: center
+  .hero
+    &::after
+      display: none
+  .section
+    &-title
+      &__word
+        &::after
+          display: none
+  .swiper
+    &-container
+      &--projects
+        margin-bottom: 2.56rem
   .types
     &__card
       margin-bottom: 5rem 
