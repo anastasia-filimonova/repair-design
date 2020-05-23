@@ -88,14 +88,32 @@
     &__card
       margin-bottom: 6rem
   .section-title
-    &__headings
+    &__heading
       &--design
         color: $light
   .design
+    margin-bottom: -0.5rem
+    padding-bottom: 0
     &__section-text
       max-width: 28rem
       font-size: 1.2rem
       color: $light
+  .footer
+    background: $dark
+    &__wrap
+      margin: 0 auto 
+      padding: 0
+      background-color: $dark
+    &__input
+      &-group
+        flex-basis: 100%
+        margin-bottom: 2rem
+    &__policy
+      align-items: start
+    &__button
+      min-width: 24.28rem
+
+
 
 
 @media screen and ( max-width: 576px )
@@ -126,8 +144,21 @@
     &__scroll-down
       display: none
 
-    
+@media screen and ( max-height: 320px )
+  .contacts
+    &__phone
+      &--header
+        padding-right: 2rem
+  .container
+    width: 95%
   
-    
-
+  .design
+    &__section
+      &-text
+        min-width: 22rem
+  // .row
+  //   &--projects
+  //     width: 95%
+  // .col-50 
+  //   width: 90%
 
