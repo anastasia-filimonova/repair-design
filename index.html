@@ -24,7 +24,7 @@
           <a href="#" class="nav__item">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
-          <a href="tel:+7(999)7683299" class="phone contacts__phone contacts__phone--header">+7 (999) 768-32-99</a>
+          <a href="tel:+7(999)7683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
           <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
         </div>
         <!-- /.contacts menu__contacts -->
@@ -172,13 +172,13 @@
         </p>
         <form action="#" class="form control__form">
           <div class="control__input-group">
-            <label for="user-name" class="label form__label control__label">Имя</label>
-            <input type="text" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
+            <label for="userName" class="label form__label control__label">Имя</label>
+            <input type="text" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group -->
           <div class="control__input-group">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <label for="userPhone" class="label form__label control__label">Телефон</label>
+            <input type="tel-control" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group -->
           <button class="button button--primary control__button">Отправить</button>
@@ -378,16 +378,16 @@
         <form action="#" class="form footer__form">
           <div class="input-group footer__input-group">
             <label for="user-name" class="label form__label label--light">Имя</label>
-            <input type="text" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="input-group footer__input-group">
             <label for="user-phone" class="label form__label label--light">Телефон</label>
-            <input type="tel" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel-footer" name="userPhone" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="input-group footer__input-group footer__input-group--full-width">
-            <label for="user-question" class="label form__label label--light">Email</label>
+            <label for="user-question" class="label form__label label--light">Вопрос</label>
             <input type="text" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">
           </div>
           <!-- /.input-group footer__input-group -->
@@ -431,15 +431,21 @@
   <!-- /.main -->
   <div class="modal">
     <div class="modal__dialog">
-      <button class="modal__close">      </button>
+      <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="#" class="form modal__form">
-        <label for="user-name" class="label form__label label--light">Имя</label>
-        <input type="text" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
-        <label for="user-phone" class="label form__label label--light">Телефон</label>
-        <input type="tel" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
-        <label for="user-email" class="label form__label label--light">Email</label>
-        <input type="email" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
+        <div class="input-group modal__input-group">
+          <label for="user-name" class="label form__label label--light">Имя</label>
+          <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="user-phone" class="label form__label label--light">Телефон</label>
+          <input type="tel-modal" name="userPhone" class="input form__input modal__input input--light" id="user-phone" required pattern="\+[0-9]{1}\([0-9]{3}\) [0-9]{2}[-]{1}[0-9]{2}[-]{1}[0-9]{3}" placeholder="Ваш номер телефона:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="user-email" class="label form__label label--light">Email</label>
+          <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
+        </div>
         <div class="policy modal__policy">
           <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
           <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
@@ -455,6 +461,8 @@
   <script src="js/jquery.vide.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
   <a href="#" class="scrollup">Наверх</a>
 </body>
