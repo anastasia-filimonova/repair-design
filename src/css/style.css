@@ -880,22 +880,23 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
-  .footer__map {
-    margin-bottom: 4rem; }
   .footer__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
-  .footer__text {
-    font-family: Yeseva One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #E3B873; }
+    align-items: center;
+    width: 66rem; }
+    .footer__container-text {
+      font-family: 'Yeseva One', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.42rem;
+      line-height: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: #E3B873; }
+  .footer__map {
+    margin-bottom: 4rem; }
 
 .modal {
   opacity: 0;
