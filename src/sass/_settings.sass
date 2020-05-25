@@ -1,30 +1,30 @@
-// * 
-//   border: 1px solid red
-
 *, *:before, *:after
   box-sizing: border-box 
 
+// *:active, *:hover, *:focus  От Пети
+//     outline-color: $primary
+
 html 
   font-size: 14px
-
 body
   font-family: 'Futura Book', sans-serif
   font-size: 1rem
-
 img
   max-width: 100%
-
 .section
   padding: 60px 0
   &--dark
     background-color: $dark
     color: $light
+// h2 <--на уровне &--dark
+//   font-size: 1.429rem
+//   font-weight: normal От Пети
   &-title
     text-align: center
     &--left
       text-align: left
-    &--light
-      color: $light
+    // &--light
+    //   color: $light  Было у меня на уровне left
     &__heading
       text-transform: uppercase
       font-family: 'Yeseva One', cursive

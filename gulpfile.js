@@ -1,38 +1,38 @@
 const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-var cleanCSS = require('gulp-clean-css');
-var rename = require('gulp-rename');
+// var cleanCSS = require('gulp-clean-css');
+// var rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
 
 function bs() { 
   serveSass(); 
   browserSync.init({
       server: {
-          baseDir: "./"
+          baseDir: "./src/"
       }
   });
-  watch("./*.html").on('change', browserSync.reload);
-  watch("./sass/**/*.sass", serveSass);
-  watch("./sass/**/*.scss", serveSass);
-  watch("./js/*.js").on('change', browserSync.reload);
+  watch("./src/*.html").on('change', browserSync.reload);
+  watch("./src/sass/**/*.sass", serveSass);
+  watch("./src/sass/**/*.scss", serveSass);
+  watch("./src/js/*.js").on('change', browserSync.reload);
 };
 
 function serveSass() {
-  return src('./sass/**/*.sass', './sass/**/*.scss')
+  return src('./src/sass/**/*.sass', './sass/**/*.scss')
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false
     }))
-    .pipe(dest('./css'))
+    .pipe(dest('./src/css'))
     .pipe(browserSync.stream()); 
 };
 
 exports.serve = bs;
 
-function mincss() {
-  return src(["./css/*.css" , '!./css/*.min.css'])
-  .pipe(rename({suffix: '.min'}))
-  .pipe(cleanCSS())
-  .pipe(dest('./'));
-};
+// function mincss() {
+//   return src(["./css/*.css" , '!./css/*.min.css'])
+//   .pipe(rename({suffix: '.min'}))
+//   .pipe(cleanCSS())
+//   .pipe(dest('./'));
+// };

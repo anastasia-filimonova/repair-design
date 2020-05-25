@@ -7,8 +7,21 @@ $(document).ready(function () {
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible')
   });
+
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible')
+  }); 
+  
+  $(document).keydown(function (event) {
+    if (event.keyCode === 27) {
+        $(modal).removeClass('modal--visible');
+    }
+  });
+
+  $(document).click(function (event) {
+      if ($(event.target).is(modal)) {
+          $(modal).removeClass('modal--visible');
+      }
   });
 
   // Слайдер 
@@ -28,7 +41,7 @@ $(document).ready(function () {
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + 10 + bullets.width() + 10)
+  next.css('left', prev.width() + 10 + bullets.width() + 10); //у меня ; не было 
   bullets.css('left', prev.width() + 10)
 
   // Инициализация WOW
@@ -49,89 +62,92 @@ $(document).ready(function () {
   });
 
   // Валидация форм
-  $('.modal__form').validate({
-    errorClass: "invalid",
-    rules: {
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      }, 
-      userPhone: "required",
-      userEmail: {
-        required: true,
-        email: true
-      }
-    },
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя должно быть не короче двух букв",
-        maxlength: "Имя должно быть не больше 15 букв"
+  $('.form').each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      errorElement: "div",
+      rules: {
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        }, 
+        userPhone: {
+          required: true,
+          minlength: 18
+        }, 
+        userQuestion: "required",
+        policyCheckbox: "required",
+        // правило-объект
+        userEmail: {
+          required: true,
+          email: true
+        }
+      }, // сообщения
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя должно быть не короче 2 букв",
+          maxlength: "Имя должно быть не длиннее 15 букв"
+        },
+        userPhone: {        
+          required: "Заполните поле",
+          minlength: "Введите корректный номер телефона"
+        },
+        userQuestion: "Заполните поле",
+        policyCheckbox: "Согласитесь с обработкой данных",
+        userEmail: {
+          required: "Заполните поле",
+          email: "Введите корректный email в формате name@domain.com"
+        }
       },
-      userPhone: "Заполните поле",
-      userEmail: {
-        required: "Заполните поле",
-        email: "Введите корректный email"
+      errorPlacement: function (error, element) {
+        if (element.attr("id") == "control-policy-checkbox") {
+          error.insertAfter(".control__policy-label");
+        }
+        else if (element.attr("id") == "footer-policy-checkbox") {
+          error.insertAfter(".footer__policy-label");
+        }
+        else if (element.attr("id") == "modal-policy-checkbox") {
+              error.insertAfter(".modal__policy-label");
+        } else {
+          error.insertAfter(element);
+        }  
       }
-    }
-  })
 
-  $('.control__form').validate({
-    errorClass: "invalid",
-    rules: {
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      }, 
-      userPhone: "required",
-    },
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя должно быть не короче двух букв",
-        maxlength: "Имя должно быть не больше 15 букв"
-      },
-      userPhone: "Заполните поле"
-    },
-  })
+    })  
+  });
+        
+  // Маска для телефона
+  $('[type=tel]').mask('+7 (000) 000-00-00')
 
-  $('.footer__form').validate({
-    errorClass: "invalid",
-    rules: {      
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      }, 
-      userPhone: "required",
-    },
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя должно быть не короче двух букв",
-        maxlength: "Имя должно быть не больше 15 букв"
-      },
-      userPhone: {
-        required: "Заполните поле",
-      }
-    }
-  })
-
-  // Маски для телефона
-  $('[type=tel-control]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
-  $('[type=tel-footer]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
-  $('[type=tel-modal]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
-  
-  // Блокировка кнопок "Отправить" без выбранного чекбокса:
-  // Надо решить вопрос с необходимостью вручную щелкать на уже активированный чекбокс (предустановка checked), т.к. без этого кнопка остаётся заблокированной. 
-  // Для работы необходимо проставить submit кнопкам класс disabled="disabled"
-  // $('.policy__checkbox').on('change', function(){
-  //   if ($(this).is(':checked')){
-  //     $('.form__submit').removeAttr('disabled');
-  //   } else {
-  //     $('.form__submit').attr('disabled', 'disabled'); 
-  //   }
-  // });
 });
+
+
+/*
+document.addEventListener("DOMContentLoaded", function(event) { 
+  const modal = document.querySelector('.modal');
+  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
+  const closeBtn = document.querySelector('.modal__close');
+  const switchModal = () => {
+    modal.classList.toggle('modal--visible')
+  }
+  modalBtn.forEach(element => {
+    element.addEventListener('click', switchModal);
+  });
+  closeBtn.addEventListener('click', switchModal);
+  //закрытие по клику вне модального окна
+  window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.classList.remove('modal--visible');
+    }
+}
+//закрытие по кнопке Escape
+window.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+      modal.classList.remove('modal--visible');
+  }
+})
+  
+})
+*/
