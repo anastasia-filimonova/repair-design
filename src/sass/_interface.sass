@@ -2,6 +2,8 @@
   padding: 0.928rem 1.428rem
   border: none
   border-radius: 2px
+  font-family: 'Futura Demi', sans-serif
+  font-size: 0.93rem
   text-transform: uppercase
   &:hover
     cursor: pointer
@@ -25,13 +27,18 @@
 .input
   background-color: transparent
   border: none
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3)
   font-size: 1.285rem
-  color: $light
   padding: 0.5rem 0
   &--light
+    color: $light
+    border-bottom: 1px solid rgba($light, 0.15)
     &::placeholder
       color: $light
+  &--dark
+    color: $dark
+    border-bottom: 1px solid rgba($darker, 0.3)
+    &::placeholder
+      color: $dark
 
 .policy
   &__checkbox
@@ -45,6 +52,7 @@
     display: flex
     align-items: center
     font-size: 1.142rem
+    cursor: pointer
     &::before
       content: ''
       width: 18px
@@ -59,17 +67,17 @@
 .scrollup
   position: fixed
   display: none
-  bottom: 1rem
-  right: 1rem
-  padding: 0.928rem 1.428rem
-  width: 8rem
-  height: 3rem
+  bottom: 10rem
+  right: 2rem
+  padding: 0.8rem 0.5rem
+  width: 5rem
+  height: 2.5rem
   opacity: 0.9
-  background: $primary
+  background: $light
   text-align: center
   border: none
   border-radius: 1px
-  color: $dark
+  color: $primary
   text-transform: uppercase
   text-decoration: none
   font-family: 'Yeseva One', cursive
@@ -82,3 +90,9 @@ label
 input
   &.invalid   
     border-bottom: 1px solid tomato
+
+
+  // div.invalid
+  // position: absolute
+  // display: inline
+  // color: tomato  

@@ -15,16 +15,18 @@
     text-transform: uppercase
     font-family: 'Yeseva One', cursive
     font-weight: normal
+    font-style: normal
     font-size: 1.428rem
   &__form
     display: flex
     flex-wrap: wrap
+    justify-content: space-between
     max-width: 37.142rem
     margin: auto
-    justify-content: space-between
   &__input
     padding-top: 0.3rem
     &-group
+      position: relative
       display: flex
       flex-direction: column
       flex-basis: 45%
@@ -32,21 +34,30 @@
       &--full-width
         flex-basis: 100%
         margin-bottom: 2rem
+        div.invalid
+          top: 3.5rem
+          left: 0
   &__policy
     flex-basis: 100%
     margin-bottom: 3.6rem
+    div.invalid
+      margin-left: 11rem
+      margin-top: 0.5rem
   &__button
     margin: auto
     padding: 1.285rem 4.785rem
+    font-size: 1.07rem
+    border-radius: 0
+    box-shadow: 0px 10px 20px rgba($primary, 0.4)
   &__menu
     background-color: $dark
-    padding: 4.285rem 0
-  &__container
+    padding: 3.5rem 0  
+  &__contacts
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    width: 66rem
+    margin-bottom: 3rem
     &-text
       font-family: 'Yeseva One', cursive 
       font-style: normal
@@ -56,35 +67,37 @@
       text-align: center
       text-transform: uppercase
       color: $primary
-    // &-icons
-    //   &--email
-    //     &::after
-    //     content: ''
-    //     background: url('../img/email-icon.svg') no-repeat center 
-    //     width: 2.143rem
-    //     height: 2.143rem
-    //     border: 2px solid $primary
-    //     border-radius: 50%
-    //     margin-left: 0.857rem
-    //   &--instagram
-    //     &::after
-    //     content: ''
-    //     background: url('../img/instagram-icon.svg') no-repeat center 
-    //     width: 2.143rem
-    //     height: 2.143rem
-    //     border: 2px solid $primary
-    //     border-radius: 50%
-    //     margin-left: 0.857rem
-
-
-        
-
+    &--mobile
+      display: none
+  &__adress
+    &-text 
+      font-family: 'Yeseva One', cursive
+      font-style: normal
+      font-weight: normal
+      text-transform: uppercase
+      color: $primary  
+      font-size: 1.428rem
+      line-height: 2rem
+      max-width: 38rem
+      text-align: center
+      margin: auto
+      margin-bottom: 1.6rem
+  &__icons
+    display: flex
+    justify-content: center
+    align-items: center
+  &__email-icon
+    margin-right: 1.1rem    
   &__map
-    margin-bottom: 4rem
-
-
-    
-
-
+    position: relative
+    padding-bottom: 50% 
+    height: 0
+    overflow: hidden
+    iframe
+      position: absolute
+      left: 10%
+      right: 10%
+      height: 80%
+      width: 80%
       
-    
+  

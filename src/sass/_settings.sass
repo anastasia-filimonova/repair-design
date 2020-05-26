@@ -16,21 +16,27 @@ img
   &--dark
     background-color: $dark
     color: $light
-// h2 <--на уровне &--dark
-//   font-size: 1.429rem
-//   font-weight: normal От Пети
   &-title
     text-align: center
     &--left
       text-align: left
-    // &--light
-    //   color: $light  Было у меня на уровне left
+    &--light
+      color: $light
     &__heading
       text-transform: uppercase
       font-family: 'Yeseva One', cursive
       line-height: 138%
+      font-size: 1.429rem
+      font-weight: normal 
+        // margin: 0 0 1.5rem 0
+      color: $darker 
+      &--light 
+        margin-bottom: 1rem 
+        color: $light
       &--primary
         color: $primary
+        // font-size: 1.929rem
+        // font-weight: normal + у Пети
     &__word
       display: flex
       align-items: center
@@ -38,22 +44,31 @@ img
         content: ''
         width: 6.43rem
         height: 1.5px
-        margin-left: 2rem
+        margin-left: 2rem // у Пети 1.6rem
         background-color: $primary
     &__text
+      // margin: 0
+      // margin-bottom: 2.2rem + у Пети
+      font-style: normal 
       font-size: 1.28rem
       line-height: 2.07rem
       max-width: 31.57rem        
-  &__image
-    display: flex
-    justify-content: center
-    align-items: center
-    &::before, &::after
-      content: ''
-      margin: 0 0.714rem
-      width: 2.285rem
-      height: 0.143rem
-      background-color: $primary
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &::before, &::after
+        content: ''
+        margin: 0 0.714rem
+        width: 2.285rem
+        height: 0.143rem
+        background-color: $primary
+        // &-subtitle
+        //   text-align: center
+        //   font-family: 'Futura Book', sans-serif
+        //   font-size: 1.428rem
+        //   line-height: 1.929rem
+        //   color: $darker  + у Пети к section
 .video
   margin: 0
   min-height: 100vh

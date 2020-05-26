@@ -3,8 +3,8 @@
   display: flex
   flex-direction: column
   justify-content: center
-  align-items: flex-start
-  padding-top: 6rem
+  align-items: flex-start 
+  padding-top: 9rem
   background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
   height: 100vh
   color: $light
@@ -19,7 +19,7 @@
   &::after
     content: ''
     position: absolute
-    bottom: 0
+    bottom: 0 
     left: 0
     right: 0
     width: 100%
@@ -29,8 +29,10 @@
     position: absolute
     left: 0
     top: 0
-    max-width: 5.714rem
+    max-width: 6.4rem
     height: 100%
+    a
+      margin: auto 
   &__scroll-down
     position: absolute
     z-index: 3
@@ -44,7 +46,10 @@
     background-color: $dark
     text-transform: uppercase
     text-decoration: none
+    font-weight: normal
+    font-size: 0.857rem
     color: $light
+    //transition: color 0.3s
     &::after
       content: ''
       background: url('../img/arrow-down.svg') no-repeat center 
@@ -58,12 +63,15 @@
     margin-left: 4.28rem
     max-width: 47.857rem
   &__text
+    margin-top: 1rem
     font-size: 1.571rem
     max-width: 35.714rem
+    line-height: 2.2rem
   &__button
+    width: 14.8rem
+    height: 3.57rem
     margin-right: 1.428rem
-    
-
+  
 .instagram
   display: flex
   justify-content: center
@@ -74,6 +82,9 @@
     align-items: center
     line-height: 0.8
     text-transform: uppercase
+    font-family: 'Futura Demi', sans-serif
+    font-weight: normal
+    font-size: 1rem
     text-decoration: none
     transform: rotate(90deg)
     color: $primary
@@ -89,6 +100,8 @@
   font-family: 'Yeseva One', cursive
   text-transform: uppercase
   font-size: 2.857rem
+  font-weight: normal
+  line-height: 1.4
   &--primary
     color: $primary
 

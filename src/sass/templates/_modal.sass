@@ -30,28 +30,38 @@
     height: 28px
     background: transparent url('../img/close.svg') no-repeat center
     border: none
-    margin: 12px
+    margin: 12px //14px
     cursor: pointer
   &__title
     text-align: center
-    font-family: 'Yeseva One', cursive
-    font-size: 1.357rem
     margin: 0
     margin-bottom: 2.428rem
+    font-family: 'Yeseva One', cursive
+    font-size: 1.357rem
+    line-height: 1.9rem
+    font-weight: normal
   &__form
     display: flex
     flex-direction: column
   &__input
     &-group
+      //position: relative
       display: flex
       flex-direction: column
+      //width: 100%
       margin-bottom: 3.428rem
-    &:last-of-type
-      margin-bottom: 1rem
+      &:last-of-type
+        margin-bottom: 1rem
+      // div.invalid
+      //   top: 3.5rem
+      //   left: 0
   &__policy
     margin-bottom: 2.7rem
+    //font-size: 1.14rem
   &__button
     align-self: flex-end
+    // padding: 1.357rem 3.214rem
+    // border-radius: 0
 
 
 

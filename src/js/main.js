@@ -41,7 +41,7 @@ $(document).ready(function () {
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + 10 + bullets.width() + 10); //у меня ; не было 
+  next.css('left', prev.width() + 10 + bullets.width() + 10);  
   bullets.css('left', prev.width() + 10)
 
   // Инициализация WOW
@@ -57,7 +57,7 @@ $(document).ready(function () {
   });
 
   $('.scrollup').click(function(){
-  $("html, body").animate({ scrollTop: 0 }, 300);
+  $("html, body").animate({ scrollTop: 0 }, 200);
   return false;
   });
 

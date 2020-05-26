@@ -15,6 +15,9 @@
       margin-right: 1rem
   
 @media screen and ( max-width: 992px )
+  // *:hover
+  .scrollup
+    visibility: hidden
   .nav
     display: none
   .hero
@@ -34,23 +37,44 @@
     &-slide
       &__heading
         font-size: 1rem
-  
+  .card
+    &__text
+      max-width: 18rem
+      padding: 1.5rem 2rem
+
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
     align-items: center
+    &--projects
+      flex-direction: row
+      justify-content: space-between
+  .col
+    &-30
+      width: 100% 
+  .card
+    &__image
+      display: block
+      position: relative
+      width: 100%
+    &__text
+      margin-top: -11rem      
+    &__title
+      font-size: 1.5rem
+    &__list
+      font-size: 1rem
+  .types
+    margin-top: 3rem
   .hero
     &::after
       display: none
   .section
     &-title
+      &__heading
+        font-size: 1.57rem 
       &__word
         &::after
           display: none
-  .swiper
-    &-container
-      &--projects
-        margin-bottom: 2.56rem
   .control
     background: $dark
     &__input-group
@@ -112,9 +136,25 @@
       align-items: start
     &__button
       min-width: 24.28rem
-
-
-
+    &__contacts
+      &--mobile
+        display: block
+      &--desktop
+        display: none
+    &__adress
+      &-text
+        width: 85vw
+    &__map
+      margin-top: 5rem
+      margin-bottom: 1rem
+        
+  .animated 
+    /*CSS animations*/
+    -webkit-animation: none !important
+    -moz-animation: none !important
+    -o-animation: none !important
+    -ms-animation: none !important
+    animation: none !important
 
 @media screen and ( max-width: 576px )
   .contacts
@@ -138,12 +178,47 @@
       margin-bottom: 1.85rem
     &__scroll-down
       display: none
+  .row
+    &--projects
+      flex-direction: column
+      align-items: center
+  .col-45
+    width: 95%
+  .col-55
+    width: 95%
+  .swiper
+    &-container
+      margin-bottom: 2.56rem
+    &-button
+      &-prev, &-next
+        background-size: 3rem
+  .section
+    &__control
+      padding: 5.7rem 0
+  .control
+    &__input
+      color: $light
+  .design  
+    &__section-text
+      width: 95vw
+      font-size: 0.85rem
+      line-height: 1.5rem
+  .footer
+    &__wrap
+      width: 95%
 
-@media screen and ( max-height: 530px )
-  .hero
-    &__scroll-down
-      display: none
 
+  #userName-control-error.invalid
+    margin-top: 0.5rem
+    color: $light
+  #userPhone-control-error.invalid
+    margin-top: 0.5rem
+    color: $light
+  #policyCheckbox-error.invalid
+    margin-top: -3.57rem
+    color: $light
+  
+  
 @media screen and ( max-height: 320px )
   .contacts
     &__phone
@@ -151,14 +226,6 @@
         padding-right: 2rem
   .container
     width: 95%
-  
-  .design
-    &__section
-      &-text
-        min-width: 22rem
-  // .row
-  //   &--projects
-  //     width: 95%
-  // .col-50 
-  //   width: 90%
+
+
 
