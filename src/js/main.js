@@ -4,7 +4,7 @@ $(document).ready(function () {
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
       modalSuccess = $('.modal-success'),
-      closeSuccess = $('.modal-success__button');
+      closeSuccess = $('.success-dialog__button');
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible')
@@ -66,6 +66,7 @@ $(document).ready(function () {
   $("html, body").animate({ scrollTop: 0 }, 800);
   return false;
   });
+
 
   // Валидация форм
   $('.form').each(function () {

@@ -410,6 +410,11 @@ label.invalid {
 input.invalid {
   border-bottom: 1px solid tomato; }
 
+.invalid {
+  position: absolute;
+  display: inline;
+  color: tomato; }
+
 .container {
   width: 90%;
   max-width: 1256px;
@@ -441,12 +446,16 @@ input.invalid {
 *, *:before, *:after {
   box-sizing: border-box; }
 
+*:active, *:hover, *:focus {
+  outline-color: #E3B873; }
+
 html {
   font-size: 14px; }
 
 body {
   font-family: 'Futura Book', sans-serif;
-  font-size: 1rem; }
+  font-size: 1rem;
+  scroll-behavior: smooth; }
 
 img {
   max-width: 100%; }
@@ -582,7 +591,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 9rem;
+  padding-top: 5rem;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff; }
@@ -1054,6 +1063,57 @@ img {
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end; }
+  .modal-success {
+    position: fixed;
+    z-index: 199;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.6); }
+    .modal-success--visible {
+      opacity: 1;
+      visibility: visible; }
+
+.success-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 36.36rem;
+  background: #131313;
+  padding: 3rem 3rem; }
+  .success-dialog__title {
+    display: block;
+    font-size: 1.8rem;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    color: #E3B873;
+    margin-top: 0;
+    margin-bottom: 2rem; }
+  .success-dialog__text {
+    display: block;
+    font-size: 1.57rem;
+    font-weight: normal;
+    line-height: 1.33;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    color: #ffffff; }
+  .success-dialog__button {
+    display: block;
+    padding: 1.357rem 3.214rem;
+    border-radius: 0;
+    margin: auto;
+    box-shadow: 0rem 0.357rem 1.071rem rgba(227, 184, 115, 0.2); }
+    .success-dialog__button:hover {
+      box-shadow: none; }
 
 @media screen and (max-width: 1330px) {
   .contacts__phone {
