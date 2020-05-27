@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="/favicon52.png" type="image/png">
   <title>Сайт компании по ремонту квартир</title>
@@ -175,7 +175,7 @@
         <!-- /.control__video video -->
         <p class="control__text wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">
           На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
-        <form action="#" class="form control__form">
+        <form action="send.php" method="POST" class="form control__form">
           <div class="control__input-group">
             <label for="userName-control" class="label form__label control__label">Имя</label>
             <input type="text" name="userName" class="input form__input control__input input--dark" id="userName-control" placeholder="Как вас зовут:">
@@ -383,7 +383,7 @@
   <footer class="footer section--dark">
     <div class="footer__wrap">
       <h3 class="footer__title">Остались вопросы?</h3>
-      <form action="#" class="form footer__form">
+      <form action="send.php" method="POST" class="form footer__form">
         <div class="input-group footer__input-group">
           <label for="userName-footer" class="label form__label label--light">Имя</label>
           <input type="text" name="userName" class="input form__input footer__input input--light" id="userName-footer" placeholder="Как вас зовут:">
@@ -465,7 +465,7 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-      <form action="#" class="form modal__form">
+      <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="userName-modal" class="label form__label label--light">Имя</label>
           <input type="text" name="userName" class="input form__input modal__input input--light" id="userName-modal" placeholder="Как вас зовут:">
@@ -489,6 +489,14 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal --> 
+
+  <div class="modal-success">
+    <div class="modal-success__dialog success-dialog">
+      <h6 class="success-dialog__title">Спасибо за заявку!</h6>
+      <p class="success-dialog__subtitle">Наш менеджер свяжется c Вами в ближайшее время.</p>
+      <button class="modal-success__button button button--primary">Вернуться</button>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
   <script src="js/jquery.vide.min.js"></script>

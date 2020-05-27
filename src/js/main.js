@@ -2,25 +2,31 @@ $(document).ready(function () {
   // Модальное окно
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
-      closeBtn = $('.modal__close');
+      closeBtn = $('.modal__close'),
+      modalSuccess = $('.modal-success'),
+      closeSuccess = $('.modal-success__button');
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible')
-  });
-
+  })
   closeBtn.on('click', function () {
-    modal.toggleClass('modal--visible')
-  }); 
-  
+    modal.toggleClass('modal-success--visible')
+  }) 
+  closeSuccess.on('click', function () {
+    $(modalSuccess).removeClass('modal-success--visible');
+})  
+
   $(document).keydown(function (event) {
     if (event.keyCode === 27) {
         $(modal).removeClass('modal--visible');
+        $(modalSuccess).removeClass('modal-success--visible')
     }
   });
 
   $(document).click(function (event) {
-      if ($(event.target).is(modal)) {
-          $(modal).removeClass('modal--visible');
+      if ($(event.target).is(modal) || $(event.target).is(modalSuccess)) {
+        $(modal).removeClass('modal--visible');
+        $(modalSuccess).removeClass('modal-success--visible');
       }
   });
 
@@ -57,7 +63,7 @@ $(document).ready(function () {
   });
 
   $('.scrollup').click(function(){
-  $("html, body").animate({ scrollTop: 0 }, 200);
+  $("html, body").animate({ scrollTop: 0 }, 800);
   return false;
   });
 
@@ -113,41 +119,24 @@ $(document).ready(function () {
         } else {
           error.insertAfter(element);
         }  
-      }
+      },
 
-    })  
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            $(form)[0].reset();
+            $(modal).removeClass('modal--visible');
+            $(modalSuccess).addClass('modal-success--visible')
+          }
+        });
+      }
+    })
   });
         
   // Маска для телефона
-  $('[type=tel]').mask('+7 (000) 000-00-00')
+  $('[type=tel]').mask('+7 (000) 000-00-00');
 
 });
-
-
-/*
-document.addEventListener("DOMContentLoaded", function(event) { 
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible')
-  }
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
-  });
-  closeBtn.addEventListener('click', switchModal);
-  //закрытие по клику вне модального окна
-  window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.classList.remove('modal--visible');
-    }
-}
-//закрытие по кнопке Escape
-window.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-      modal.classList.remove('modal--visible');
-  }
-})
-  
-})
-*/
