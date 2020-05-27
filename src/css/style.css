@@ -1130,8 +1130,9 @@ img {
     margin-right: 1rem; } }
 
 @media screen and (max-width: 992px) {
-  .scrollup {
-    visibility: hidden; }
+  *::hover {
+    cursor: none;
+    box-shadow: none; }
   .nav {
     display: none; }
   .hero__instagram {
@@ -1250,7 +1251,6 @@ img {
       margin-top: 5rem;
       margin-bottom: 1rem; }
   .animated {
-    /*CSS animations*/
     -webkit-animation: none !important;
     animation: none !important; } }
 
@@ -1295,6 +1295,10 @@ img {
     line-height: 1.5rem; }
   .footer__wrap {
     width: 95%; }
+  .success-dialog {
+    width: 90vw; }
+    .success-dialog__text {
+      max-width: 80vw; }
   #userName-control-error.invalid {
     margin-top: 0.5rem;
     color: #ffffff; }
