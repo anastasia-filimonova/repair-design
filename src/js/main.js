@@ -1,35 +1,47 @@
-$(document).ready(function () {
-  // Модальное окно
-  var modal = $('.modal'),
-      modalBtn = $('[data-toggle=modal]'),
-      closeBtn = $('.modal__close'),
-      modalSuccess = $('.modal-success'),
-      closeSuccess = $('.success-dialog__button');
-
-  modalBtn.on('click', function () {
-    modal.toggleClass('modal--visible')
-  })
-  closeBtn.on('click', function () {
-    modal.toggleClass('modal-success--visible')
-  }) 
-  closeSuccess.on('click', function () {
-    $(modalSuccess).removeClass('modal-success--visible');
-})  
-
-  $(document).keydown(function (event) {
-    if (event.keyCode === 27) {
-        $(modal).removeClass('modal--visible');
-        $(modalSuccess).removeClass('modal-success--visible')
-    }
+  // открывашка:
+$(document).ready(function($) {
+  // Модальные окна (открытие/закрытие по кнопкам, закрытие по нажатию на Esc и пустое место)
+	$('.modalOpenBtn').click(function() {
+		$('.modal').fadeIn();
+		return false;
+	});	
+	
+	$('.modal__close').click(function() {
+		$(this).parents('.modal').fadeOut();
+		return false;
+	});		
+ 
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.modal').fadeOut();
+		}
+	});
+	
+	$('.modal').click(function(e) {
+		if ($(e.target).closest('.modal__dialog').length == 0) {
+			$(this).fadeOut();					
+		}
   });
-
-  $(document).click(function (event) {
-      if ($(event.target).is(modal) || $(event.target).is(modalSuccess)) {
-        $(modal).removeClass('modal--visible');
-        $(modalSuccess).removeClass('modal-success--visible');
-      }
+  
+  $('.success-dialog__button').click(function() {
+		$(this).parents('.modal-success').fadeOut();
+		return false;
+  });	
+  
+  $('.modal-success').click(function(e) {
+		if ($(e.target).closest('.modal-success__dialog').length == 0) {
+			$(this).fadeOut();					
+		}
   });
-
+  
+  $(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.modal-success').fadeOut();
+		}
+  });
+  
   // Слайдер 
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
@@ -53,7 +65,7 @@ $(document).ready(function () {
   // Инициализация WOW
   new WOW().init();
 
-  // Кнопка "Наверх"
+  // Кнопка "Вверх"
   $(window).scroll(function(){
     if ($(this).scrollTop() > 800) { 
       $('.scrollup').fadeIn();
@@ -66,7 +78,6 @@ $(document).ready(function () {
   $("html, body").animate({ scrollTop: 0 }, 800);
   return false;
   });
-
 
   // Валидация форм
   $('.form').each(function () {
@@ -85,12 +96,11 @@ $(document).ready(function () {
         }, 
         userQuestion: "required",
         policyCheckbox: "required",
-        // правило-объект
         userEmail: {
           required: true,
           email: true
         }
-      }, // сообщения
+      }, 
       messages: {
         userName: {
           required: "Заполните поле",
@@ -116,7 +126,7 @@ $(document).ready(function () {
           error.insertAfter(".footer__policy-label");
         }
         else if (element.attr("id") == "modal-policy-checkbox") {
-              error.insertAfter(".modal__policy-label");
+          error.insertAfter(".modal__policy-label");
         } else {
           error.insertAfter(element);
         }  
@@ -129,8 +139,8 @@ $(document).ready(function () {
           data: $(form).serialize(),
           success: function (response) {
             $(form)[0].reset();
-            $(modal).removeClass('modal--visible');
-            $(modalSuccess).addClass('modal-success--visible')
+            $('.modal').fadeOut();
+            $('.modalSuccess').fadeIn();
           }
         });
       }
@@ -139,5 +149,5 @@ $(document).ready(function () {
         
   // Маска для телефона
   $('[type=tel]').mask('+7 (000) 000-00-00');
-
+  // закрывашка:
 });
