@@ -1010,24 +1010,22 @@ img {
       width: 80%; }
 
 .modal {
-  opacity: 0;
-  visibility: hidden;
+  display: flex;
   position: fixed;
   z-index: 199;
-  display: flex;
   justify-content: center;
   align-items: center;
+  top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
+  botom: 0;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(19, 19, 19, 0.6); }
-  .modal--visible {
-    opacity: 1;
-    visibility: visible; }
   .modal__dialog {
-    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 36.36rem;
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
     padding: 2.357rem 3.5rem 1.928rem;
@@ -1063,23 +1061,19 @@ img {
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end; }
-  .modal-success {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    z-index: 199;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(19, 19, 19, 0.6); }
-    .modal-success--visible {
-      opacity: 1;
-      visibility: visible; }
+
+.modal-success {
+  display: flex;
+  position: fixed;
+  z-index: 199;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6); }
 
 .success-dialog {
   display: flex;
@@ -1116,6 +1110,9 @@ img {
     box-shadow: 0rem 0.357rem 1.071rem rgba(227, 184, 115, 0.2); }
     .success-dialog__button:hover {
       box-shadow: none; }
+
+.hidden {
+  display: none; }
 
 @media screen and (max-width: 1330px) {
   .contacts__phone {

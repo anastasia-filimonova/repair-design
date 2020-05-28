@@ -2,46 +2,46 @@
 $(document).ready(function($) {
   // Модальные окна (открытие/закрытие по кнопкам, закрытие по нажатию на Esc и пустое место)
 	$('.modalOpenBtn').click(function() {
-		$('.modal').fadeIn();
+		$('.modal').toggleClass('hidden');
 		return false;
 	});	
 	
 	$('.modal__close').click(function() {
-		$(this).parents('.modal').fadeOut();
+		$(this).parents('.modal').addClass('hidden');
 		return false;
 	});		
  
 	$(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();
-			$('.modal').fadeOut();
+			$('.modal').addClass('hidden');
 		}
 	});
 	
 	$('.modal').click(function(e) {
 		if ($(e.target).closest('.modal__dialog').length == 0) {
-			$(this).fadeOut();					
+			$(this).addClass('hidden');					
 		}
   });
   
   $('.success-dialog__button').click(function() {
-		$(this).parents('.modal-success').fadeOut();
+		$(this).parents('.modal-success').addClass('hidden');
 		return false;
   });	
   
   $('.modal-success').click(function(e) {
 		if ($(e.target).closest('.modal-success__dialog').length == 0) {
-			$(this).fadeOut();					
+			$(this).addClass('hidden');					
 		}
   });
   
   $(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();
-			$('.modal-success').fadeOut();
+			$('.modal-success').addClass('hidden');
 		}
   });
-  
+
   // Слайдер 
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
@@ -139,8 +139,8 @@ $(document).ready(function($) {
           data: $(form).serialize(),
           success: function (response) {
             $(form)[0].reset();
-            $('.modal').fadeOut();
-            $('.modalSuccess').fadeIn();
+            $('.modal').addClass('hidden');
+            $('.modalSuccess').toggleClass('hidden');
           }
         });
       }
@@ -151,3 +151,4 @@ $(document).ready(function($) {
   $('[type=tel]').mask('+7 (000) 000-00-00');
   // закрывашка:
 });
+
