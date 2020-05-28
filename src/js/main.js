@@ -142,6 +142,7 @@ $(document).ready(function($) {
             $(form)[0].reset();
             $('.modal').addClass('hidden');
             $('#modalSuccess').toggleClass('hidden');
+            yaCounter64436440.reachGoal('request');
           }
         });
       }
@@ -152,4 +153,3 @@ $(document).ready(function($) {
   $('[type=tel]').mask('+7 (000) 000-00-00');
   // закрывашка:
 });
-
