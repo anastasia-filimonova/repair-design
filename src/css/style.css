@@ -779,15 +779,15 @@ input.invalid {
   max-width: 55rem; }
 
 .control__policy {
+  position: relative;
   flex-basis: 100%;
   margin-top: 1.2rem; }
   .control__policy-label {
     justify-content: center;
     font-size: 1.143rem; }
   .control__policy div.invalid {
-    position: absolute;
-    margin-right: -100vw;
-    left: 45vw; }
+    left: 40%;
+    right: 100%; }
 
 .control__input {
   color: #131313; }
@@ -1209,12 +1209,18 @@ input.invalid {
     background: #131313; }
     .control__input-group {
       margin-bottom: 4.5rem; }
+      .control__input-group div.invalid {
+        margin-top: 1rem; }
     .control__button {
       margin-top: 7.64rem;
       margin-bottom: -9.5rem; }
     .control__policy-label {
       position: absolute;
       margin-top: -6rem; }
+    .control__policy div.invalid {
+      position: absolute;
+      left: 0;
+      top: -2rem; }
     .control__text {
       color: #ffffff; }
     .control__form {
@@ -1239,6 +1245,8 @@ input.invalid {
       color: #ffffff; }
     .control__policy-label {
       color: #ffffff; }
+    .control__policy div.invalid {
+      width: 85vw; }
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
@@ -1327,22 +1335,30 @@ input.invalid {
   .success-dialog {
     width: 90vw; }
     .success-dialog__text {
-      max-width: 80vw; } }
+      max-width: 80vw; }
+  .modal__policy-label {
+    font-size: 1rem; }
+    .modal__policy-label div.invalid {
+      line-height: 1rem; } }
 
 @media screen and (max-height: 320px) {
   .contacts__phone--header {
     padding-right: 2rem; }
   .container {
     width: 95%; }
-  .modal__button {
-    margin-top: 5rem;
-    width: 75vw; }
-  .modal__policy-label {
-    font-size: 1rem;
-    margin-top: 0;
-    line-height: 0.95rem; }
-    .modal__policy-label div.invalid {
-      position: absolute;
-      margin-bottom: 5rem; }
-  .modal__input-group:last-of-type {
-    margin-bottom: 3rem; } }
+  .modal {
+    weight: 100vw; }
+    .modal__form {
+      weight: 95vw;
+      margin: 0; }
+    .modal__button {
+      margin-top: 5rem;
+      width: 75vw; }
+    .modal__policy-label {
+      position: relative; }
+      .modal__policy-label div.invalid {
+        position: absolute;
+        margin-top: 1rem;
+        margin-bottom: 4rem; }
+    .modal__input-group:last-of-type {
+      margin-bottom: 3rem; } }

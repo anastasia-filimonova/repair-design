@@ -77,8 +77,11 @@
           display: none
   .control
     background: $dark
-    &__input-group
-      margin-bottom: 4.5rem
+    &__input
+      &-group
+        margin-bottom: 4.5rem
+        div.invalid
+          margin-top: 1rem
     &__button
       margin-top: 7.64rem
       margin-bottom: -9.5rem
@@ -86,6 +89,10 @@
       &-label
         position: absolute
         margin-top: -6rem 
+      div.invalid
+        position: absolute
+        left: 0
+        top: -2rem
     &__text
       color: $light
     &__form
@@ -100,6 +107,8 @@
     &__policy
       &-label
         color: $light
+      div.invalid
+        width: 85vw
   .types
     &__card
       margin-bottom: 5rem 
@@ -208,8 +217,13 @@
     width: 90vw
     &__text
       max-width: 80vw
-  
-  
+  .modal 
+    &__policy
+      &-label
+        font-size: 1rem
+        div.invalid
+          line-height: 1rem
+    
 @media screen and ( max-height: 320px )
   .contacts
     &__phone
@@ -218,19 +232,20 @@
   .container
     width: 95%
   .modal
-    &__dialog
-      height: 
+    weight: 100vw
+    &__form
+      weight: 95vw 
+      margin: 0
     &__button
       margin-top: 5rem
       width: 75vw
     &__policy
       &-label
-        font-size: 1rem
-        margin-top: 0
-        line-height: 0.95rem
+        position: relative
         div.invalid
           position: absolute
-          margin-bottom: 5rem
+          margin-top: 1rem
+          margin-bottom: 4rem
     &__input
       &-group  
         &:last-of-type
