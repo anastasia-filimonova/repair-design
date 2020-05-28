@@ -1031,7 +1031,7 @@ input.invalid {
   top: 0;
   left: 0;
   right: 0;
-  botom: 0;
+  bottom: 0;
   margin: auto;
   width: 100vw;
   height: 100vh;
@@ -1351,9 +1351,9 @@ input.invalid {
   .container {
     width: 95%; }
   .modal {
-    weight: 100vw; }
+    width: 100vw; }
     .modal__form {
-      weight: 95vw;
+      width: 95vw;
       margin: 0; }
     .modal__button {
       margin-top: 5rem;
