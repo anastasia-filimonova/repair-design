@@ -30,7 +30,7 @@
         <!-- /.nav menu__nav -->
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-          <button class="button contacts__button button--primary modalOpenBtn" >Заказать звонок</button>
+          <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
         </div>
         <!-- /.contacts menu__contacts -->
       </div>
@@ -50,7 +50,7 @@
           <h1 class="title hero__title wow animate__animated animate__fadeInDown" data-wow-delay="0.3s">Турецкий ремонт<br>в&nbsp;<span class="title--primary">
             Ростове-на-дону</span></h1>
           <p class="hero__text wow animate__animated animate__fadeInDown" data-wow-delay="0.5s">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-          <button class="button hero__button button--primary modalOpenBtn wow animate__animated animate__fadeInDown" data-wow-delay="0.7s">Рассчитать стоимость</button>
+          <button class="button hero__button button--primary wow animate__animated animate__fadeInDown" data-wow-delay="0.7s" data-toggle="modal">Рассчитать стоимость</button>
           <button class="button hero__button button--outline wow animate__animated animate__fadeInDown" data-wow-delay="0.7s">Отправить заявку</button>
         </div> 
         <!-- /.hero__content -->
@@ -178,17 +178,17 @@
         <form action="send.php" method="POST" class="form control__form">
           <div class="control__input-group">
             <label for="userName-control" class="label form__label control__label">Имя</label>
-            <input autocomplete="off" type="text" name="userName" class="input form__input control__input input--dark" id="userName-control" placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input control__input input--dark" id="userName-control" placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group -->
           <div class="control__input-group">
             <label for="userPhone-control" class="label form__label control__label">Телефон</label>
-            <input autocomplete="off" type="tel" name="userPhone" class="input form__input control__input input--dark" id="userPhone-control" placeholder="Ваш номер телефона:">
+            <input type="tel" name="userPhone" class="input form__input control__input input--dark" id="userPhone-control" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group -->
           <button class="button button--primary control__button form__submit">Отправить</button>
           <div class="policy control__policy">
-            <input autocomplete="off" id="control-policy-checkbox" type="checkbox"   class="policy__checkbox" name="policyCheckbox" checked>
+            <input type="checkbox" name="policyCheckbox" id="control-policy-checkbox" class="policy__checkbox" checked>
             <label for="control-policy-checkbox" class="policy__label control__policy-label">я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy control__policy -->
@@ -386,21 +386,21 @@
       <form action="send.php" method="POST" class="form footer__form">
         <div class="input-group footer__input-group">
           <label for="userName-footer" class="label form__label label--light">Имя</label>
-          <input autocomplete="off" type="text" name="userName" class="input form__input footer__input input--light" id="userName-footer" placeholder="Как вас зовут:">
+          <input type="text" name="userName" class="input form__input footer__input input--light" id="userName-footer" placeholder="Как вас зовут:">
         </div>
         <!-- /.input-group footer__input-group -->
         <div class="input-group footer__input-group">
           <label for="userPhone-footer" class="label form__label label--light">Телефон</label>
-          <input autocomplete="off" type="tel" name="userPhone" class="input form__input footer__input input--light" id="userPhone-footer" placeholder="Ваш номер телефона:">
+          <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="userPhone-footer" placeholder="Ваш номер телефона:">
         </div>
         <!-- /.input-group footer__input-group -->
         <div class="input-group footer__input-group footer__input-group--full-width">
           <label for="userQuestion-footer" class="label footer__label form__label label--light">Вопрос</label>
-          <input autocomplete="off" type="text" name="userQuestion" class="input form__input footer__input input--light" id="userQuestion-footer" placeholder="Я хочу спросить:">
+          <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="userQuestion-footer" placeholder="Я хочу спросить:">
         </div>
         <!-- /.input-group footer__input-group -->
         <div class="policy footer__policy">
-          <input autocomplete="off" type="checkbox" name="policyCheckbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
+          <input type="checkbox" name="policyCheckbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
           <label for="footer-policy-checkbox" class="policy__label policy__label--center footer__policy-label">я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
@@ -461,25 +461,25 @@
   </footer>
   <!-- /.footer section--dark -->
 
-  <div class="modal hidden">
+  <div class="modal">
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="userName-modal" class="label form__label label--light">Имя</label>
-          <input autocomplete="off" type="text" name="userName" class="input form__input modal__input input--light" id="userName-modal" placeholder="Как вас зовут:">
+          <input type="text" name="userName" class="input form__input modal__input input--light" id="userName-modal" placeholder="Как вас зовут:">
         </div>
         <div class="input-group modal__input-group">
           <label for="userPhone-modal" class="label form__label label--light">Телефон</label>
-          <input autocomplete="off" type="tel" name="userPhone" class="input form__input modal__input input--light" id="userPhone-modal" placeholder="Ваш номер телефона:">
+          <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="userPhone-modal" placeholder="Ваш номер телефона:">
         </div>
         <div class="input-group modal__input-group modal__input-group--last">
           <label for="userEmail-modal" class="label form__label label--light">Email</label>
-          <input autocomplete="off" type="email" name="userEmail" class="input form__input modal__input input--light" id="userEmail-modal" placeholder="Ваш email:">
+          <input type="email" name="userEmail" class="input form__input modal__input input--light" id="userEmail-modal" placeholder="Ваш email:">
         </div>
         <div class="policy modal__policy">
-          <input autocomplete="off" type="checkbox" name="policyCheckbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
+          <input type="checkbox" name="policyCheckbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
           <label for="modal-policy-checkbox" class="policy__label modal__policy-label">я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
@@ -490,11 +490,11 @@
   </div>
   <!-- /.modal --> 
 
-  <div class="modal-success hidden" id="modalSuccess"> 
+  <div class="modal-success">
     <div class="modal-success__dialog success-dialog">
       <h6 class="success-dialog__title">Спасибо за заявку!</h6>
-      <p class="success-dialog__text">Наш менеджер свяжется c Вами в ближайшее время.</p>
-      <button class="success-dialog__button button button--primary">Вернуться</button>
+      <p class="success-dialog__subtitle">Наш менеджер свяжется c Вами в ближайшее время.</p>
+      <button class="modal-success__button button button--primary">Вернуться</button>
     </div>
   </div>
 

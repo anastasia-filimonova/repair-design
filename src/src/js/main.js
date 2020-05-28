@@ -1,45 +1,33 @@
-  // открывашка:
-$(document).ready(function($) {
-  // Модальные окна (открытие/закрытие по кнопкам, закрытие по нажатию на Esc и пустое место)
-	$('.modalOpenBtn').click(function() {
-		$('.modal').toggleClass('hidden');
-		return false;
-	});	
-  
-  $('.modal__close').click(function() {
-    $(this).parents('.modal').addClass('hidden');
-    return false;
-	});		
- 
-	$(document).keydown(function(e) {
-		if (e.keyCode === 27) {
-			e.stopPropagation();
-			$('.modal').addClass('hidden');
-		}
-	});
-	
-	$('.modal').click(function(e) {
-		if ($(e.target).closest('.modal__dialog').length == 0) {
-			$(this).addClass('hidden');					
-		}
+$(document).ready(function () {
+  // Модальное окно
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close'),
+      modalSuccess = $('.modal-success'),
+      closeSuccess = $('.modal-success__button');
+
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible')
+  })
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal-success--visible')
+  }) 
+  closeSuccess.on('click', function () {
+    $(modalSuccess).removeClass('modal-success--visible');
+})  
+
+  $(document).keydown(function (event) {
+    if (event.keyCode === 27) {
+        $(modal).removeClass('modal--visible');
+        $(modalSuccess).removeClass('modal-success--visible')
+    }
   });
-  
-  $('.success-dialog__button').click(function() {
-		$(this).parents('.modal-success').addClass('hidden');
-		return false;
-  });	
-  
-  $('.modal-success').click(function(e) {
-		if ($(e.target).closest('.modal-success__dialog').length == 0) {
-			$(this).addClass('hidden');					
-		}
-  });
-  
-  $(document).keydown(function(e) {
-		if (e.keyCode === 27) {
-			e.stopPropagation();
-			$('.modal-success').addClass('hidden');
-		}
+
+  $(document).click(function (event) {
+      if ($(event.target).is(modal) || $(event.target).is(modalSuccess)) {
+        $(modal).removeClass('modal--visible');
+        $(modalSuccess).removeClass('modal-success--visible');
+      }
   });
 
   // Слайдер 
@@ -65,7 +53,7 @@ $(document).ready(function($) {
   // Инициализация WOW
   new WOW().init();
 
-  // Кнопка "Вверх"
+  // Кнопка "Наверх"
   $(window).scroll(function(){
     if ($(this).scrollTop() > 800) { 
       $('.scrollup').fadeIn();
@@ -96,11 +84,12 @@ $(document).ready(function($) {
         }, 
         userQuestion: "required",
         policyCheckbox: "required",
+        // правило-объект
         userEmail: {
           required: true,
           email: true
         }
-      }, 
+      }, // сообщения
       messages: {
         userName: {
           required: "Заполните поле",
@@ -118,7 +107,6 @@ $(document).ready(function($) {
           email: "Введите корректный email в формате name@domain.com"
         }
       },
-
       errorPlacement: function (error, element) {
         if (element.attr("id") == "control-policy-checkbox") {
           error.insertAfter(".control__policy-label");
@@ -140,8 +128,8 @@ $(document).ready(function($) {
           data: $(form).serialize(),
           success: function (response) {
             $(form)[0].reset();
-            $('.modal').addClass('hidden');
-            $('#modalSuccess').toggleClass('hidden');
+            $(modal).removeClass('modal--visible');
+            $(modalSuccess).addClass('modal-success--visible')
           }
         });
       }
@@ -150,6 +138,5 @@ $(document).ready(function($) {
         
   // Маска для телефона
   $('[type=tel]').mask('+7 (000) 000-00-00');
-  // закрывашка:
-});
 
+});
