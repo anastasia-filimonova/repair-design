@@ -9,9 +9,23 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="/favicon52.png" type="image/png">
   <title>Сайт компании по ремонту квартир</title>
-</head>
-<body>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+    ym(64436440, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/64436440" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</head>
+
+<body>
   <header class="header">
     <div class="container">
       <div class="menu">
@@ -186,9 +200,9 @@
             <input autocomplete="off" type="tel" name="userPhone" class="input form__input control__input input--dark" id="userPhone-control" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group -->
-          <button class="button button--primary control__button form__submit">Отправить</button>
+          <button class="button button--primary control__button form__submit" onclick="ym(64436440,'reachGoal','callback'); return true;">Отправить</button>
           <div class="policy control__policy">
-            <input autocomplete="off" id="control-policy-checkbox" type="checkbox"   class="policy__checkbox" name="policyCheckbox" checked>
+            <input id="control-policy-checkbox" type="checkbox"   class="policy__checkbox" name="policyCheckbox" checked>
             <label for="control-policy-checkbox" class="policy__label control__policy-label">я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy control__policy -->
@@ -215,7 +229,7 @@
             <div class="card types__card">
               <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
               <div class="card__text wow animate__animated animate__zoomIn" data-wow-delay="0.2s">
-                <h3 class="card__title">Косметический ремонт</h3>
+                <h3 class="card__title">Косметический ремонт</h3> 
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
                   <li class="card__item">Поклейка обоев</li>
@@ -235,7 +249,7 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card types__card">
-              <img src="img\types\type-2.jpg" alt="Капитальный ремонт" class="card__image">
+              <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
               <div class="card__text wow animate__animated animate__zoomIn" data-wow-delay="0.4s">
                 <h3 class="card__title">Капитальный ремонт</h3>
                 <ul class="card__list">
@@ -257,7 +271,7 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card types__card">
-              <img src="img\types\type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
+              <img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text wow animate__animated animate__zoomIn" data-wow-delay="0.6s">
                 <h3 class="card__title">Дизайнерский ремонт</h3>
                 <ul class="card__list">
@@ -299,7 +313,7 @@
         <div class="row">
           <div class="col-30">
             <div class="card design__card">
-              <img src="img\design\design-1.jpg" alt="Минимальный проект" class="card__image">
+              <img src="img/design/design-1.jpg" alt="Минимальный проект" class="card__image">
               <div class="card__text wow animate__animated animate__slideInUp" data-wow-delay="0.2s">
                 <h3 class="card__title">Минимальный</h3> 
                 <ul class="card__list">
@@ -318,7 +332,7 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card design__card">
-              <img src="img\design\design-2.jpg" alt="Стандартный проект" class="card__image">
+              <img src="img/design/design-2.jpg" alt="Стандартный проект" class="card__image">
               <div class="card__text wow animate__animated animate__slideInUp" data-wow-delay="0.4s">
                 <h3 class="card__title">Стандартный</h3>
                 <ul class="card__list"> 
@@ -340,7 +354,7 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card design__card">
-              <img src="img\design\design-3.jpg" alt="Полный проект" class="card__image">
+              <img src="img/design/design-3.jpg" alt="Полный проект" class="card__image">
               <div class="card__text wow animate__animated animate__slideInUp" data-wow-delay="0.6s">
                 <h3 class="card__title">Полный</h3>  
                 <ul class="card__list">
@@ -400,11 +414,11 @@
         </div>
         <!-- /.input-group footer__input-group -->
         <div class="policy footer__policy">
-          <input autocomplete="off" type="checkbox" name="policyCheckbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
+          <input type="checkbox" name="policyCheckbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
           <label for="footer-policy-checkbox" class="policy__label policy__label--center footer__policy-label">я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
-        <button class="button button--primary footer__button">Отправить</button>               
+        <button class="button button--primary footer__button" onclick="ym(64436440,'reachGoal','request'); return true;">Отправить</button>               
       </form>
       <a name="contacts"></a> 
       <!--так сами контакты лучше видно-->      
@@ -479,11 +493,11 @@
           <input autocomplete="off" type="email" name="userEmail" class="input form__input modal__input input--light" id="userEmail-modal" placeholder="Ваш email:">
         </div>
         <div class="policy modal__policy">
-          <input autocomplete="off" type="checkbox" name="policyCheckbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
+          <input type="checkbox" name="policyCheckbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
           <label for="modal-policy-checkbox" class="policy__label modal__policy-label">я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
-        <button class="button button--primary modal__button">Отправить заявку</button>               
+        <button class="button button--primary modal__button" onclick="ym(64436440,'reachGoal','request'); return true;">Отправить заявку</button>               
       </form>
     </div>
     <!-- /.modal__dialog -->

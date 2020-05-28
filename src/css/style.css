@@ -449,7 +449,9 @@ body {
   scroll-behavior: smooth; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
 
 .section {
   padding: 60px 0; }
@@ -1289,7 +1291,9 @@ input.invalid {
       margin-bottom: 1rem; }
   .animated {
     -webkit-animation: none !important;
-    animation: none !important; } }
+    animation: none !important; }
+  .scrollup {
+    display: none; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
