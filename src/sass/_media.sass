@@ -208,15 +208,8 @@
     width: 90vw
     &__text
       max-width: 80vw
-  #userName-control-error.invalid
-    margin-top: 0.5rem
-    color: $light
-  #userPhone-control-error.invalid
-    margin-top: 0.5rem
-    color: $light
-  #policyCheckbox-error.invalid
-    margin-top: -3.57rem
-    color: $light
+  
+  
 @media screen and ( max-height: 320px )
   .contacts
     &__phone
@@ -224,6 +217,21 @@
         padding-right: 2rem
   .container
     width: 95%
-
-
-
+  .modal
+    &__dialog
+      height: 
+    &__button
+      margin-top: 5rem
+      width: 75vw
+    &__policy
+      &-label
+        font-size: 1rem
+        margin-top: 0
+        line-height: 0.95rem
+        div.invalid
+          position: absolute
+          margin-bottom: 5rem
+    &__input
+      &-group  
+        &:last-of-type
+          margin-bottom: 3rem

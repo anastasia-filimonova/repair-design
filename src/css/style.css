@@ -361,6 +361,8 @@ template {
       color: #131313; }
     .input--dark::placeholder {
       color: #131313; }
+  .input-group {
+    position: relative; }
 
 .policy__checkbox {
   opacity: 0;
@@ -403,17 +405,6 @@ template {
   font-family: 'Yeseva One', cursive; }
   .scrollup:hover {
     cursor: pointer; }
-
-label.invalid {
-  color: tomato; }
-
-input.invalid {
-  border-bottom: 1px solid tomato; }
-
-.invalid {
-  position: absolute;
-  display: inline;
-  color: tomato; }
 
 .container {
   width: 90%;
@@ -522,6 +513,14 @@ img {
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
     font-size: 1.5rem; }
+
+div.invalid {
+  position: absolute;
+  display: inline;
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
 
 @font-face {
   font-family: 'Futura Book';
@@ -785,13 +784,25 @@ img {
   .control__policy-label {
     justify-content: center;
     font-size: 1.143rem; }
-    .control__policy-label div.invalid {
-      margin-right: -100%;
-      left: 50%; }
+  .control__policy div.invalid {
+    position: absolute;
+    margin-right: -100vw;
+    left: 45vw; }
 
 .control__input {
   color: #131313; }
+  .control__input::-webkit-input-placeholder {
+    color: #131313; }
+  .control__input::-moz-placeholder {
+    color: #131313; }
+  .control__input:-ms-input-placeholder {
+    color: #131313; }
+  .control__input::-ms-input-placeholder {
+    color: #131313; }
+  .control__input::placeholder {
+    color: #131313; }
   .control__input-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-basis: 30%; }
@@ -944,15 +955,15 @@ img {
       .footer__input-group--full-width {
         flex-basis: 100%;
         margin-bottom: 2rem; }
-        .footer__input-group--full-width div.invalid {
-          top: 3.5rem;
-          left: 0; }
+      .footer__input-group div.invalid {
+        top: 3.5rem;
+        left: 0; }
   .footer__policy {
     flex-basis: 100%;
     margin-bottom: 3.6rem; }
     .footer__policy div.invalid {
-      margin-left: 11rem;
-      margin-top: 0.5rem; }
+      left: 50%;
+      margin-left: -100px; }
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem;
@@ -1024,43 +1035,62 @@ img {
   height: 100vh;
   background-color: rgba(19, 19, 19, 0.6); }
   .modal__dialog {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    max-width: 36.36rem;
+    max-width: 38rem;
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
-    padding: 2.357rem 3.5rem 1.928rem;
+    padding: 2.36rem 4.2rem 1.928rem;
     color: #ffffff; }
   .modal__close {
     position: absolute;
     right: 0;
     top: 0;
-    width: 28px;
-    height: 28px;
+    width: 2rem;
+    height: 2rem;
     background: transparent url("../img/close.svg") no-repeat center;
     border: none;
-    margin: 12px;
+    margin: 1rem;
     cursor: pointer; }
   .modal__title {
     text-align: center;
     margin: 0;
-    margin-bottom: 2.428rem;
+    margin-bottom: 2.4rem;
     font-family: 'Yeseva One', cursive;
     font-size: 1.357rem;
-    line-height: 1.9rem;
+    line-height: 1.87rem;
     font-weight: normal; }
   .modal__form {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    position: relative; }
   .modal__input-group {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 3.428rem; }
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 3.4rem; }
     .modal__input-group:last-of-type {
       margin-bottom: 1rem; }
+    .modal__input-group div.invalid {
+      position: absolute;
+      top: 3.5rem;
+      left: 0; }
   .modal__policy {
-    margin-bottom: 2.7rem; }
+    position: relative;
+    margin-bottom: 1.75rem;
+    font-size: 1.14rem; }
+    .modal__policy-label {
+      position: absolute;
+      margin-top: -3.25rem; }
+      .modal__policy-label div.invalid {
+        margin-bottom: 1rem;
+        margin-left: 1rem; }
   .modal__button {
-    align-self: flex-end; }
+    align-self: flex-end;
+    padding: 1.357rem 3.214rem;
+    border-radius: 0; }
 
 .modal-success {
   display: flex;
@@ -1297,19 +1327,22 @@ img {
   .success-dialog {
     width: 90vw; }
     .success-dialog__text {
-      max-width: 80vw; }
-  #userName-control-error.invalid {
-    margin-top: 0.5rem;
-    color: #ffffff; }
-  #userPhone-control-error.invalid {
-    margin-top: 0.5rem;
-    color: #ffffff; }
-  #policyCheckbox-error.invalid {
-    margin-top: -3.57rem;
-    color: #ffffff; } }
+      max-width: 80vw; } }
 
 @media screen and (max-height: 320px) {
   .contacts__phone--header {
     padding-right: 2rem; }
   .container {
-    width: 95%; } }
+    width: 95%; }
+  .modal__button {
+    margin-top: 5rem;
+    width: 75vw; }
+  .modal__policy-label {
+    font-size: 1rem;
+    margin-top: 0;
+    line-height: 0.95rem; }
+    .modal__policy-label div.invalid {
+      position: absolute;
+      margin-bottom: 5rem; }
+  .modal__input-group:last-of-type {
+    margin-bottom: 3rem; } }

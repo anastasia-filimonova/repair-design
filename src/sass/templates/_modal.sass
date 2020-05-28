@@ -13,52 +13,63 @@
   height: 100vh
   background-color: rgba($dark, 0.6)
   &__dialog
+    position: relative
     margin-left: auto
     margin-right: auto
-    max-width: 36.36rem
+    max-width: 38rem
     background: $dark url('../img/bg-lines.svg') no-repeat center
-    padding: 2.357rem 3.5rem 1.928rem
+    padding: 2.36rem 4.2rem 1.928rem
     color: $light
   &__close
     position: absolute
     right: 0
     top: 0
-    width: 28px
-    height: 28px
+    width: 2rem
+    height: 2rem
     background: transparent url('../img/close.svg') no-repeat center
     border: none
-    margin: 12px //14px
+    margin: 1rem
     cursor: pointer
   &__title
     text-align: center
     margin: 0
-    margin-bottom: 2.428rem
+    margin-bottom: 2.4rem
     font-family: 'Yeseva One', cursive
     font-size: 1.357rem
-    line-height: 1.9rem
+    line-height: 1.87rem
     font-weight: normal
   &__form
     display: flex
     flex-direction: column
+    position: relative
   &__input
     &-group
-      //position: relative
+      position: relative
       display: flex
       flex-direction: column
-      //width: 100%
-      margin-bottom: 3.428rem
+      justify-content: flex-start
+      width: 100%
+      margin-bottom: 3.4rem
       &:last-of-type
         margin-bottom: 1rem
-      // div.invalid
-      //   top: 3.5rem
-      //   left: 0
+      div.invalid
+        position: absolute
+        top: 3.5rem
+        left: 0
   &__policy
-    margin-bottom: 2.7rem
-    //font-size: 1.14rem
+    position: relative
+    margin-bottom: 1.75rem
+    font-size: 1.14rem
+    &-label
+      position: absolute
+      margin-top: -3.25rem
+      div.invalid
+        margin-bottom: 1rem
+        margin-left: 1rem 
   &__button
     align-self: flex-end
-    // padding: 1.357rem 3.214rem
-    // border-radius: 0
+    padding: 1.357rem 3.214rem
+    border-radius: 0
 .modal-success 
   display: flex
   position: fixed
@@ -73,6 +84,7 @@
   height: 100%
   background-color: rgba($dark, 0.6)
 .success-dialog
+  //position: relative
   display: flex
   flex-direction: column
   align-items: center
@@ -109,3 +121,4 @@
       box-shadow: none
 .hidden
   display: none
+

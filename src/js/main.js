@@ -5,10 +5,10 @@ $(document).ready(function($) {
 		$('.modal').toggleClass('hidden');
 		return false;
 	});	
-	
-	$('.modal__close').click(function() {
-		$(this).parents('.modal').addClass('hidden');
-		return false;
+  
+  $('.modal__close').click(function() {
+    $(this).parents('.modal').addClass('hidden');
+    return false;
 	});		
  
 	$(document).keydown(function(e) {
@@ -118,6 +118,7 @@ $(document).ready(function($) {
           email: "Введите корректный email в формате name@domain.com"
         }
       },
+
       errorPlacement: function (error, element) {
         if (element.attr("id") == "control-policy-checkbox") {
           error.insertAfter(".control__policy-label");
@@ -126,7 +127,7 @@ $(document).ready(function($) {
           error.insertAfter(".footer__policy-label");
         }
         else if (element.attr("id") == "modal-policy-checkbox") {
-          error.insertAfter(".modal__policy-label");
+              error.insertAfter(".modal__policy-label");
         } else {
           error.insertAfter(element);
         }  
