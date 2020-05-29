@@ -75,9 +75,24 @@ $(document).ready(function($) {
   });
 
   $('.scrollup').click(function(){
-  $("html, body").animate({ scrollTop: 0 }, 800);
+  $("html, body").animate({ scrollTop: 0 }, 1200);
   return false;
   });
+
+
+  jQuery(function($){
+    $('a[href*="#"]').on('click.smoothscroll', function( e ){
+    var hash    = this.hash, _hash   = hash.replace(/#/,''), theHref = $(this).attr('href').replace(/#.*/, '');
+    if( theHref && location.href.replace(/#.*/,'') != theHref ) return;
+    var $target = _hash === '' ? $('body') : $( hash + ', a[name="'+ _hash +'"]').first();
+    if( ! $target.length ) return;
+    e.preventDefault();
+    $('html, body').stop().animate({ scrollTop: $target.offset().top - 0 }, 1200, 'swing', function(){
+    window.location.hash = hash;
+    });
+    });
+    });
+
 
   // Валидация форм
   $('.form').each(function () {
@@ -151,5 +166,6 @@ $(document).ready(function($) {
         
   // Маска для телефона
   $('[type=tel]').mask('+7 (000) 000-00-00');
+
   // закрывашка:
 });

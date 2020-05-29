@@ -395,11 +395,11 @@ template {
   width: 5rem;
   height: 2.5rem;
   opacity: 0.9;
-  background: #ffffff;
+  background: #E3B873;
   text-align: center;
   border: none;
   border-radius: 1px;
-  color: #E3B873;
+  color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
   font-family: 'Yeseva One', cursive; }
@@ -1031,7 +1031,7 @@ input.invalid {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  botom: 0;
   margin: auto;
   width: 100vw;
   height: 100vh;
@@ -1351,9 +1351,9 @@ input.invalid {
   .container {
     width: 95%; }
   .modal {
-    width: 100vw; }
+    weight: 100vw; }
     .modal__form {
-      width: 95vw;
+      weight: 95vw;
       margin: 0; }
     .modal__button {
       margin-top: 5rem;

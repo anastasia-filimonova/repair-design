@@ -15,18 +15,17 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="menu">
+      <div class="menu" >
         <div>
-          <a href="#hero" class="logo menu__logo wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Repair Design Project</a>
+          <a href="#a-main" class="logo menu__logo wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Repair Design Project</a>
         </div>
-        <a name="hero"></a>
         <nav class="nav menu__nav">
-          <a href="#hero" class="nav__item">Главная</a>
-          <a href="#projects" class="nav__item">Проекты</a>
+          <a href="#a-main" class="nav__item">Главная</a>
+          <a href="#a-projects" class="nav__item">Проекты</a>
           <a href="#" class="nav__item">Замер</a>
           <a href="#" class="nav__item">Команда</a>
           <a href="#" class="nav__item">Отзывы</a>
-          <a href="#contacts" class="nav__item">Контакты</a>
+          <a href="#a-contacts" class="nav__item">Контакты</a>
         </nav>
         <!-- /.nav menu__nav -->
         <div class="contacts menu__contacts">
@@ -43,7 +42,7 @@
 
   <main>
     <section class="hero">
-      <div class="instagram hero__instagram">
+      <div class="instagram hero__instagram" id="a-main">
         <a href="#" class="instagram__link">Instagram</a>
       </div>
       <div class="container">
@@ -57,15 +56,14 @@
         <!-- /.hero__content -->
       </div> 
       <!-- /.container -->
-      <a href="#" class="hero__scroll-down">Листайте вниз</a>
+      <a href="#a-contacts" class="hero__scroll-down wow animate__animated animate__bounce" data-wow-delay="1s" id="a-projects">Листайте вниз</a>
     </section> 
     <!-- /.hero -->
 
     <section class="section section--dark projects">
-      <a name="projects"></a>
       <div class="container">
         <div class="row row--projects">
-          <div class="col-45 wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+          <div class="col-45 wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s">
             <div class="section-title section-title--left">
               <h2 class="section-title__heading section-title__heading--primary" id="section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
               <p class="section-title__text section-title__text--projects">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>         
@@ -136,7 +134,7 @@
             </div> 
           </div>
           <!-- /.col-45 -->
-          <div class="col-55 wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">
+          <div class="col-55 wow animate__animated animate__fadeInRight" data-wow-delay="0.3s">
             <div class="swiper-container swiper-no-swiping">
               <div class="swiper-wrapper swiper-wrapper--photo">
                 <div class="swiper-slide">
@@ -174,7 +172,7 @@
           <img src="img/play-icon.svg" alt="video" class="video__play">
         </div>
         <!-- /.control__video video -->
-        <p class="control__text wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">
+        <p class="control__text wow animate__animated animate__fadeInRight" data-wow-delay="0.3s">
           На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
         <form action="send.php" method="POST" class="form control__form">
           <div class="control__input-group">
@@ -405,9 +403,8 @@
           <label for="footer-policy-checkbox" class="policy__label policy__label--center footer__policy-label">я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
-        <button class="button button--primary footer__button">Отправить</button>               
+        <button class="button button--primary footer__button" id="a-contacts">Отправить</button>               
       </form>
-      <a name="contacts"></a> 
       <!--так сами контакты лучше видно-->      
     </div>
     <!-- /.footer-wrap -->
@@ -424,7 +421,6 @@
     <div class="map footer__map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.2221370796537!2d39.72002236737593!3d47.24442125881228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2s!4v1590488042186!5m2!1sru!2s" height="400" width="900" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
-    <a name="contacts"></a>
     <div class="footer__contacts footer__contacts--mobile">
       <div class="footer__adress">
         <p class="footer__adress-text">Ростов на дону, Торговый центр Plaza. Прямой телефон +7&nbsp;(999)&nbsp;768&nbsp;32&nbsp;99</p>
@@ -438,15 +434,15 @@
       <div class="container">
         <div class="menu">
           <div>
-            <a href="#hero" class="logo menu__logo wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Repair Design Project</a>
+            <a href="#a-main" class="logo menu__logo wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Repair Design Project</a>
           </div>
           <nav class="nav menu__nav">
-            <a href="#hero" class="nav__item">Главная</a>
-            <a href="#projects" class="nav__item">Проекты</a>
+            <a href="#a-main" class="nav__item">Главная</a>
+            <a href="#a-projects" class="nav__item">Проекты</a>
             <a href="#" class="nav__item">Замер</a>
             <a href="#" class="nav__item">Команда</a>
             <a href="#" class="nav__item">Отзывы</a>
-            <a href="#contacts" class="nav__item">Контакты</a>
+            <a href="#a-contacts" class="nav__item">Контакты</a>
           </nav>
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone" onclick="ym(64436440, 'reachGoal', 'callback'); return true;">+7 (999) 768-32-99</a>
