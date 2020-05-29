@@ -729,6 +729,14 @@ input.invalid {
 .section-title__heading--primary {
   text-align: left; }
 
+.section-title__heading--left {
+  font-size: 1.428rem;
+  font-family: 'Yeseva One', cursive;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2rem;
+  text-transform: uppercase; }
+
 .swiper {
   align-items: flex-end; }
   .swiper-slide {
@@ -1084,7 +1092,6 @@ input.invalid {
     margin-right: 1.1rem; }
   .footer__map {
     position: relative;
-    padding-bottom: 50%;
     height: 0;
     width: 60vw;
     align-self: center;
@@ -1098,6 +1105,9 @@ input.invalid {
       right: 10%;
       height: 80%;
       width: 80%; }
+    .footer__map--wrap {
+      align-items: center;
+      padding-bottom: 50%; }
 
 .modal {
   display: flex;
