@@ -167,5 +167,22 @@ $(document).ready(function($) {
   // Маска для телефона
   $('[type=tel]').mask('+7 (000) 000-00-00');
 
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '460',
+      width: '100%',
+      videoId: 'EGUONs-fwv0',
+      events: {
+        'onReady': videoPlay,
+        
+      }
+    });
+  })
+
+  function videoPlay(event){
+      event.target.playVideo();
+  }
+
   // закрывашка:
 });

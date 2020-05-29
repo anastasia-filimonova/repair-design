@@ -1,8 +1,12 @@
 .projects
   margin-top: -5px
   padding-bottom: 30rem
-
+.section-title
+  &__heading
+    &--primary
+      text-align: left
 .swiper
+  align-items: flex-end
   &-slide
     display: flex
     flex-wrap: wrap
@@ -36,6 +40,12 @@
     &-prev
       left: 0
       background: url('../img/arrow-prev.svg') no-repeat center
+  &-img
+    width: 100%
+    overflow: hidden
+.row
+  &--projects
+    align-items: flex-end
 
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto

@@ -45,9 +45,15 @@
     div.invalid
       left: 50%
       margin-left: -100px
-      // font-size: 1rem
-      // left: 12%
-      // margin-left: 0
+      font-size: 1rem
+      left: 12%
+      margin-left: 0
+  &__telephone
+    text-decoration: none
+    color: $primary
+    &:hover
+      cursor: pointer
+      color: $light
   
   &__button
     margin: auto
@@ -98,7 +104,11 @@
     position: relative
     padding-bottom: 50% 
     height: 0
+    width: 60vw
+    align-self: center
     overflow: hidden
+    margin-bottom: 4.64rem 
+    filter: grayscale(100%)
     iframe
       position: absolute
       left: 10%
@@ -107,7 +117,3 @@
       width: 80%
       
  
-//  .footer__map 
-//     max-width: 66.07rem
-//     margin-bottom: 4.64rem
-//     filter: grayscale(100%)

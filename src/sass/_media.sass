@@ -39,9 +39,30 @@
         font-size: 1rem
   .card
     &__text
-      max-width: 18rem
-      padding: 1.5rem 2rem
-
+      margin-left: 0
+   
+  .types
+    &__card
+      margin-bottom: 4.29rem
+  .design
+    background: #131313
+    &__section
+      &-subtitle
+        max-width: 28rem
+    -dark-background
+      height: 178rem
+    &__heading
+    &__section-subtitle
+      color: #fff
+    .dark-layout
+      position: relative
+      &::before display:none
+  .card
+    &__pricetag
+      &--design
+        padding-left: 0
+        text-align: center
+  
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
@@ -57,6 +78,10 @@
       display: block
       position: relative
       width: 100%
+      &--bg
+        position: relative
+        &::before
+          display: none
     &__text
       margin-top: -11rem      
     &__title
@@ -124,6 +149,21 @@
     &__heading
       &--design
         color: $light
+  .row
+    &--projects
+      flex-direction: column
+      align-items: center
+  .col-45
+    width: 95%
+    margin-bottom: 1rem
+  .col-55
+    width: 95%
+  .swiper
+    &-container
+      margin-bottom: 2.56rem
+    &-button
+      &-prev, &-next
+        background-size: 3rem
   .design
     margin-bottom: -0.5rem
     padding-bottom: 0
@@ -188,26 +228,16 @@
       margin-bottom: 1.85rem
     &__scroll-down
       display: none
-  .row
-    &--projects
-      flex-direction: column
-      align-items: center
-  .col-45
-    width: 95%
-  .col-55
-    width: 95%
-  .swiper
-    &-container
-      margin-bottom: 2.56rem
-    &-button
-      &-prev, &-next
-        background-size: 3rem
+  
   .section
     &__control
       padding: 5.7rem 0
   .control
     &__input
       color: $light
+    &__video
+      min-height: 17.5rem
+      margin-bottom: 1.9rem
   .design  
     &__section-text
       width: 95vw

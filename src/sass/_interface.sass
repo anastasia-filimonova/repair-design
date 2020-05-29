@@ -5,6 +5,7 @@
   font-family: 'Futura Demi', sans-serif
   font-size: 0.93rem
   text-transform: uppercase
+  transition: color 0.2s 
   &:hover
     cursor: pointer
   &--primary
@@ -18,7 +19,11 @@
     border: 1px solid $light
     background-color: transparent
     color: $light
-
+    &:hover
+      background-color: $primary
+      border: none
+      box-shadow: 0rem 0.357rem 1.071rem rgba($primary, 0.2)
+    
 .label
   font-size: 1.07rem
   &--light

@@ -29,7 +29,7 @@
         <!-- /.nav menu__nav -->
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone" onclick="ym(64436440, 'reachGoal', 'callback'); return true;">+7 (999) 768-32-99</a>
-          <button class="button contacts__button button--primary modalOpenBtn" >Заказать звонок</button>
+          <button class="button contacts__button button--primary modalOpenBtn">Заказать звонок</button>
         </div>
         <!-- /.contacts menu__contacts -->
       </div>
@@ -49,8 +49,8 @@
           <h1 class="title hero__title wow animate__animated animate__fadeInDown" data-wow-delay="0.3s">Турецкий ремонт<br>в&nbsp;<span class="title--primary">
             Ростове-на-дону</span></h1>
           <p class="hero__text wow animate__animated animate__fadeInDown" data-wow-delay="0.5s">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-          <button class="button hero__button button--primary modalOpenBtn wow animate__animated animate__fadeInDown" data-wow-delay="0.7s">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline wow animate__animated animate__fadeInDown" data-wow-delay="0.7s">Отправить заявку</button>
+          <button class="button hero__button button--primary hero__button--primary modalOpenBtn wow animate__animated animate__fadeInDown" data-wow-delay="0.7s">Рассчитать стоимость</button>
+          <button class="button hero__button button--outline modalOpenBtn wow animate__animated animate__fadeInDown" data-wow-delay="0.7s">Отправить заявку</button>
         </div> 
         <!-- /.hero__content -->
       </div> 
@@ -93,37 +93,37 @@
                   <div class="swiper-slide">
                     <div class="swiper-slide__text">
                       <h3 class="swiper-slide__heading">Город:</h3>
-                      <span class="swiper-slide__value"></span>
+                      <span class="swiper-slide__value">Ростов-на-Дону<br>ЖК Юбилейный</span>
                     </div>
                     <div class="swiper-slide__text">
                       <h3 class="swiper-slide__heading">Площадь:</h3>
-                      <span class="swiper-slide__value"></span>
+                      <span class="swiper-slide__value">75 м<sup>2</sup></span>
                     </div>
                     <div class="swiper-slide__text">
                       <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                      <span class="swiper-slide__value"></span>
+                      <span class="swiper-slide__value">7 месяцев</span>
                     </div>
                     <div class="swiper-slide__text">
                       <h3 class="swiper-slide__heading">Стоимость:</h3>
-                      <span class="swiper-slide__value"></span>
+                      <span class="swiper-slide__value">По запросу</span>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="swiper-slide__text">
                       <h3 class="swiper-slide__heading">Город:</h3>
-                      <span class="swiper-slide__value"></span>
+                      <span class="swiper-slide__value">Ростов-на-Дону<br>ЖК Солнечный</span>
                     </div>
                     <div class="swiper-slide__text">
                       <h3 class="swiper-slide__heading">Площадь:</h3>
-                      <span class="swiper-slide__value"></span>
+                      <span class="swiper-slide__value">120 м<sup>2</sup></span>
                     </div>
                     <div class="swiper-slide__text">
                       <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                      <span class="swiper-slide__value"></span>
+                      <span class="swiper-slide__value">9месяцев</span>
                     </div>
                     <div class="swiper-slide__text">
                       <h3 class="swiper-slide__heading">Стоимость:</h3>
-                      <span class="swiper-slide__value"></span>
+                      <span class="swiper-slide__value">По запросу</span>
                     </div>
                   </div>
                </div>
@@ -137,13 +137,13 @@
             <div class="swiper-container swiper-no-swiping">
               <div class="swiper-wrapper swiper-wrapper--photo">
                 <div class="swiper-slide">
-                  <img src="img/projects/projects.jpg" alt="Завершенные проекты">
+                  <img class="swiper-img" src="img/projects/projects-1.jpg" alt="Завершенные проекты">
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/projects/projects.jpg" alt="Завершенные проекты">
+                  <img class="swiper-img" src="img/projects/projects-2.jpg" alt="Завершенные проекты">
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/projects/projects.jpg" alt="Завершенные проекты">
+                  <img class="swiper-img" src="img/projects/projects-3.jpg" alt="Завершенные проекты">
                 </div>
               </div>
             </div>
@@ -167,9 +167,9 @@
           <!-- /.section-title__image -->
         </div>
         <!-- /.section-title -->
-        <div class="control__video video">
-          <img src="img/play-icon.svg" alt="video" class="video__play">
-        </div>
+        <div class="control__video video" id="player">
+          <script src="https://www.youtube.com/iframe_api"></script>>
+          <img src="img/play-icon.svg" alt="video" class="video__play"></div>
         <!-- /.control__video video -->
         <p class="control__text wow animate__animated animate__fadeInRight" data-wow-delay="0.3s">
           На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
@@ -223,7 +223,7 @@
                   <li class="card__item">Замена розеток и выключателей</li>
                   <li class="card__item">Замена дверей</li>
                 </ul>
-                <strong class="card__pricetag">
+                <strong class="card__pricetag card__pricetag--types">
                   от 900 руб / m<sup>2</sup>
                 </strong>
               </div>
@@ -245,7 +245,7 @@
                   <li class="card__item">Замена розеток и выключателей</li>
                   <li class="card__item">Замена дверей</li>
                 </ul>
-                <strong class="card__pricetag">
+                <strong class="card__pricetag card__pricetag--types">
                   от 1800 руб / m<sup>2</sup>
                 </strong>
               </div>
@@ -267,7 +267,7 @@
                   <li class="card__item">Замена розеток и выключателей</li>
                   <li class="card__item">Замена дверей</li>
                 </ul>
-                <strong class="card__pricetag">
+                <strong class="card__pricetag card__pricetag--types">
                   от 4000 руб / m<sup>2</sup>
                 </strong>
               </div>
@@ -297,7 +297,7 @@
         <div class="row">
           <div class="col-30">
             <div class="card design__card">
-              <img src="img/design/design-1.jpg" alt="Минимальный проект" class="card__image">
+              <div class="card__image--bg"><img src="img/design/design-1.jpg" alt="Минимальный проект" class="card__image"></div>
               <div class="card__text wow animate__animated animate__slideInUp" data-wow-delay="0.2s">
                 <h3 class="card__title">Минимальный</h3> 
                 <ul class="card__list">
@@ -316,7 +316,7 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card design__card">
-              <img src="img/design/design-2.jpg" alt="Стандартный проект" class="card__image">
+              <div class="card__image--bg"><img src="img/design/design-2.jpg" alt="Стандартный проект" class="card__image"></div>
               <div class="card__text wow animate__animated animate__slideInUp" data-wow-delay="0.4s">
                 <h3 class="card__title">Стандартный</h3>
                 <ul class="card__list"> 
@@ -338,7 +338,8 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card design__card">
-              <img src="img/design/design-3.jpg" alt="Полный проект" class="card__image">
+              <div class="card__image--bg">
+              <img src="img/design/design-3.jpg" alt="Полный проект" class="card__image"></div>
               <div class="card__text wow animate__animated animate__slideInUp" data-wow-delay="0.6s">
                 <h3 class="card__title">Полный</h3>  
                 <ul class="card__list">
@@ -407,13 +408,18 @@
       <!--так сами контакты лучше видно-->      
     </div>
     <!-- /.footer-wrap -->
+
+    <div class="icons footer__icons">
+      <a href="#" class="footer__icons--wrap"><img src="img/mail-icon.svg" alt="" class="mail-icon footer__mail-icon"> </a>
+      <a href="#" class="footer__icons--wrap"><img src="img/inst-icon.svg" alt="" class="inst-icon footer__inst-icon"></a>
+    </div>
     
     <div class="footer__contacts footer__contacts--desktop">
       <div class="footer__adress">
-        <p class="footer__adress-text">Ростов на дону, Торговый центр Plaza <br>Прямой телефон +7&nbsp;(999)&nbsp;768&nbsp;32&nbsp;99</p>
+        <p class="footer__adress-text">Ростов на дону, Торговый центр Plaza <br>Прямой телефон <a href="+79997683299" class="footer__telephone">+7&nbsp;(999)&nbsp;768&nbsp;32&nbsp;99</a></p>
         <div class="icons footer__icons">
-          <img src="img/email-icon.svg" alt="" class="email-icon footer__email-icon">
-          <img src="img/instagram-icon.svg" alt="" class="instagram-icon footer__instagram-icon">
+          <a href="#" class="footer__icons--wrap"><img src="img/email-icon.svg" alt="" class="email-icon footer__email-icon"></a>
+          <a href="#" class="footer__icons--wrap"><img src="img/instagram-icon.svg" alt="" class="instagram-icon footer__instagram-icon"></a> 
         </div> 
       </div>     
     </div>

@@ -17,10 +17,10 @@
   font-weight: normal
   text-decoration: none
   text-transform: uppercase
+  &:hover
+    color: $light
+    
 .nav
-  // display: flex
-  // justify-content: space-between
-  // align-items: center
   &__item
     margin-right: 2.857rem
     transition: color 0.2s
@@ -30,6 +30,7 @@
     font-weight: normal
     &:hover
       color: $primary
+      
 .phone
   color: $primary
 .contacts
@@ -40,5 +41,10 @@
     margin-right: 3.214rem
     font-family: 'Futura Demi', sans-serif
     font-weight: normal
+    &:hover
+      color: $light
   &__button
     padding: 0.85rem 1.428rem
+    &:hover
+      box-shadow: none
+      background-color: transparent
