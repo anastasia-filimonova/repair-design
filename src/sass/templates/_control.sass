@@ -9,13 +9,14 @@
     margin-bottom: 4.428rem
     max-width: 58.357rem
     min-height: 31rem
-    background: $dark url('../img/video-mask.jpg') no-repeat center
+    background: $dark url('../img/video-mask.jpg') no-repeat center / cover
     box-shadow: 0 1.42rem 3.57rem rgba(0, 0, 0, 0.15)
-  &::before
-    content: ''
-    width: 100%
-    height: 100%
-    background-color: rgba(black, 0.8)
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(black, 0.8) 
   &__text
     max-width: 40.785rem
     margin: auto
@@ -47,7 +48,7 @@
       font-size: 1.143rem
     div.invalid
       position: absolute
-      left: 36%
+      left: 36.5%
   &__input
     color: $dark
     &::placeholder
@@ -67,11 +68,25 @@
     &:hover
       cursor: pointer
       box-shadow: none
+      background-color: $light
+      color: $primary
+      text-decoration: underline
+      
       
  
-  .video
-    &__play
-      position: relative
-      margin: auto
-      &:hover
-        cursor: pointer
+.video
+  &__play
+    position: absolute
+    margin: auto
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    ransform: scale(1,1)
+    transition-timing-function: ease-out
+    transition-duration: 0.2s
+    &:hover
+      cursor: pointer
+      transform: scale(1.3,1.3)
+      transition-timing-function: ease-out
+      transition-duration: 0.3s
